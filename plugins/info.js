@@ -25,8 +25,8 @@ const isCommand7 = /^(group(s|list|o(lista)?)|list(a)?(de)?grupo(s)?|grupolista)
 const isCommand8 = /^(info(gata|bot)|informaci(ón|on)(gata|bot))$/i.test(command) 
 const isCommand9 = /^(contactos?|contacts?)$/i.test(command) 
 const isCommand10 = /^(ping|speed|velocidad|rapidez|velocity)$/i.test(command) 
-const isCommand11 = /^(dona(te|si)|donar|apoyar|paypal|donating|aportar)$/i.test(command) 
-const isCommand12 = /^(report|request|reporte|bugs|bug|reportowner|reportes|reportar)$/i.test(command) 
+const isCommand11 = /^(dona)$/i.test(command) 
+const isCommand12 = /^(reportar)$/i.test(command) 
 
 async function reportError(e) {
 await m.reply(lenguajeGB['smsMalError3']() + '\n*' + lenguajeGB.smsMensError1() + '*\n*' + usedPrefix + `${lenguajeGB.lenguaje() == 'es' ? 'reporte' : 'report'}` + '* ' + `${lenguajeGB.smsMensError2()} ` + usedPrefix + command)
@@ -56,7 +56,7 @@ let estado = `*╭𝄗𝄗✦ --${lenguajeGB.smsEstado1()}-- ✦𝄗𝄗⬣*
  ⎸ ┈┈┈┈┈┈┈┈┈┈┈
  ⎸ ❉ *${lenguajeGB.smsEstado7()}* ➺ *_${uptime}_*
 *╰𝄗𝄗𝄗𝄗𝄗⬣*`.trim()
-await conn.sendFile(m.chat, gataImg.getRandom(), 'gata.jpg', estado, fkontak)
+await conn.sendFile(m.chat, gataImg.getRandom(), 'josue.jpg', estado, fkontak)
 } catch (e) {
 reportError(e)
 }   
@@ -65,17 +65,8 @@ break
 case isCommand2:
 try{
 let media = './media/menus/Menu2.jpg'
-let str = `
-◎ *GITHUB*
-*${md}*\n
-◎ *INSTAGRAM*
-*${ig}*\n
-◎ *YOUTUBE*
-*${yt}*\n
-◎ *FACEBOOK*
-*${fb}*\n
-${lenguajeGB.smsOfc2()}`.trim() 
-await conn.sendFile(m.chat, media, 'gata.jpg', lenguajeGB.smsOfc1() + '\n\n' + str, fkontak)  
+let str = `no data`.trim() 
+await conn.sendFile(m.chat, media, 'josue.jpg', lenguajeGB.smsOfc1() + '\n\n' + str, fkontak)  
 } catch (e) {
 reportError(e)
 }    
@@ -83,20 +74,8 @@ break
     
   case isCommand3:
 try{
-let str = `
-${lenguajeGB.smsGrupoOfc1()}
-_⭔ ${grupo[0]}_\n
-_⭔ ${grupo[1]}_\n
-_⭔ ${grupo[2]}_\n
-_⭔ ${grupo[3]}_\n
-_⭔ ${grupo[4]}_\n
-_⭔ ${grupo[5]}_\n\n
-${lenguajeGB.smsGrupoOfc2()}
-_⭔ ${grupo[6]}_\n
-_⭔ ${grupo[7]}_\n
-_⭔ ${grupo[8]}_\n
-_⭔ ${grupo[9]}_`.trim()
-await conn.sendFile(m.chat, gataImg.getRandom(), 'gata.jpg', str, fkontak)   
+let str = `no data`.trim()
+await conn.sendFile(m.chat, gataImg.getRandom(), 'josue.jpg', str, fkontak)   
 } catch (e) {
 reportError(e)
 }    
@@ -105,7 +84,7 @@ break
 case isCommand4:
 try{ 
 _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
-await conn.sendFile(m.chat, gataImg.getRandom(), 'gata.jpg', `*_${_package.homepage}_*\n\n` + lenguajeGB.smsPrivadoDonar(), fkontak)    
+await conn.sendFile(m.chat, gataImg.getRandom(), 'josue.jpg', `*_${_package.homepage}_*\n\n` + lenguajeGB.smsPrivadoDonar(), fkontak)    
 } catch (e) {
 reportError(e)
 }    
@@ -116,20 +95,10 @@ let codigo = `no data`
 let codigo2 = `no data`
 let codigo3 = `no data`
 try{	
-let termux = `*◎ T E R M U X*`
-let replit = `*◎ R E P L I T*`
-let heroku = `*◎ H E R O K U*`
-let windows = `*◎ W I N D O W S / V P S / R D P*\n
-⎔ _Git_
-https://git-scm.com/downloads
-⎔ _NodeJS_
-https://nodejs.org/en/download
-⎔ _FFmpeg_
-https://ffmpeg.org/download.html
-⎔ _ImageMagick_
-https://imagemagick.org/script/download.php
-⎔ _Yarn_
-https://classic.yarnpkg.com/en/docs/install#windows-stable`
+let termux = ``
+let replit = ``
+let heroku = ``
+let windows = ``
 await conn.reply(m.chat, termux + '\n\n' + replit + '\n\n' + heroku + '\n\n' + windows, fkontak)
 } catch (e) {
 reportError(e)
@@ -143,7 +112,7 @@ _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')
 let pp = await conn.profilePictureUrl(`${global.conn.user.jid.split`@`[0]}` + '@s.whatsapp.net', 'image').catch(_ => gataImg.getRandom())
 let aa = `*_🍄 ${lenguajeGB.smsCreA()} ${taguser}, ${lenguajeGB.smsCreB()} ${_package.name} ${lenguajeGB.smsCreC()}_*\n\n` 
 let bb = `${packname}\n*◎ Wa.me/${owner[0][0]}*\n\n`
-await conn.sendFile(m.chat, pp, 'gata.jpg', aa + bb + ig, fkontak) 
+await conn.sendFile(m.chat, pp, 'josue.jpg', aa + bb + ig, fkontak) 
 } catch (e) {
 reportError(e)
 }    
@@ -183,21 +152,9 @@ let neww = performance.now()
 let speed = neww - old
 //let pp = './media/menus/Menu1.jpg'
 
-let info = `
-*${lenguajeGB.smsCreInfo().slice(0, -1)}*
-🍁꙰᠁❥ *◜${lenguajeGB.smsBT1()}◞* ⇢ ${author}
-🌼꙰᠁❥ *◜${lenguajeGB.smsBT2()}◞* ⇢ ${vs}
-🍁꙰᠁❥ *◜${lenguajeGB.smsBT3()}◞* ⇢ ( ${usedPrefix} )
-🌻꙰᠁❥ *◜${lenguajeGB.smsBT4()}◞* ⇢ ${chats.length - groups.length}
-🌼꙰᠁❥ *◜${lenguajeGB.smsBT5()}◞* ⇢ ${groups.length}
-🍁꙰᠁❥ *◜${lenguajeGB.smsBT6()}◞* ⇢ ${chats.length}
-🌻꙰᠁❥ *◜${lenguajeGB.smsBT7()}◞* ⇢ ${uptime}
-🌼꙰᠁❥ *◜${lenguajeGB.smsBT8()}◞* ⇢ ${totalreg}
-🍁꙰᠁❥ *◜${lenguajeGB.smsEstado4().toUpperCase()}◞* ⇢ ${rtotalreg}/${totalreg}
-🌻꙰᠁❥ *◜${lenguajeGB.smsVl1()}◞* ⇢ ${(speed * 1000).toFixed(0) / 1000}
-🌼꙰᠁❥ *◜${lenguajeGB.smsBT9()}◞* ⇢ ${totaljadibot.length}`.trim()
+let info = `¿Quieres info? yapea p 976254398`.trim()
 
-await conn.sendFile(m.chat, gataImg.getRandom(), 'gata.jpg', info, fkontak) 
+await conn.sendFile(m.chat, gataImg.getRandom(), 'josue.jpg', info, fkontak) 
 } catch (e) {
 reportError(e)
 }     
@@ -286,7 +243,7 @@ ${cpus[0] ? `*Uso total de la CPU*
 ${cpus[0].model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}
 *CPU Core(s) Uso (${cpus.length} Core CPU)*
 ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}`).join('\n\n')}` : ''}`
-await conn.sendFile(m.chat, gataImg.getRandom(), 'gata.jpg', caption.trim(), fkontak) 
+await conn.sendFile(m.chat, gataImg.getRandom(), 'josue.jpg', caption.trim(), fkontak) 
 } catch (e) {
 reportError(e)
 }   
@@ -295,7 +252,7 @@ break
 case isCommand11:
 try { 
 let donar = lenguajeGB.smsMensajeDonar().trim()
-await conn.sendFile(m.chat, img21, 'gata.jpg', lenguajeGB.smsTituloDonar() + '\n\n' + donar + '\n\n' + paypal + '\n' + ig, fkontak) 
+await conn.sendFile(m.chat, img21, 'josue.jpg', lenguajeGB.smsTituloDonar() + '\n\n' + donar + '\n\n' + paypal + '\n' + ig, fkontak) 
 await conn.reply(m.sender, lenguajeGB.smsPrivadoDonar() + '\n\n' + paypal + '\n' + md, m)
 } catch (e) {
 reportError(e)

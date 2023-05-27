@@ -109,10 +109,10 @@ let groupinfo = `
 � ${lenguajeGB.smsInsGC2()}
 → ${data.subject === undefined ? '❌' : data.subject}
 
-🌼 ${lenguajeGB.smsInsGC3()}
+${lenguajeGB.smsInsGC3()}
 → ${data.creation === undefined ? '❌' : data.creation}
 
-🌻 ${lenguajeGB.smsInsGC4()}
+${lenguajeGB.smsInsGC4()}
 → ${data.owner === undefined ? '❌' : data.owner}
 
  ${lenguajeGB.smsInsGC5()}

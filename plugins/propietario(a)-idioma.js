@@ -17,19 +17,19 @@ if (args[0] == 'es'){
 global.lenguajeGB = es
 await conn.sendButton(m.chat, lenguajeGB['smsAvisoEG']() + idioma.text + '\n' + 'დ ```Español```', wm, null, [[`☘️ 𝗠 𝗘 𝗡 𝗨`, `${usedPrefix}menu`]], fkontak, m)
   
-}else if (args[0] == 'en'){
+}else if (args[0] == 'egg'){
 global.lenguajeGB = en
 await conn.sendButton(m.chat, lenguajeGB['smsAvisoEG']() + idioma.text + '\n' + 'დ ```English```', wm, null, [[`☘️ 𝗠 𝗘 𝗡 𝗨`, `${usedPrefix}menu`]], fkontak, m)
   
-}else if (args[0] == 'id'){
+}else if (args[0] == 'iggd'){
 global.lenguajeGB = id
 await conn.sendButton(m.chat, lenguajeGB['smsAvisoEG']() + idioma.text + '\n' + 'დ ```Bahasa Indonesia```', wm, null, [[`☘️ 𝗠 𝗘 𝗡 𝗨`, `${usedPrefix}menu`]], fkontak, m)
   
-}else if (args[0] == 'ar'){
+}else if (args[0] == 'agrgrr'){
 global.lenguajeGB = ar
 await conn.sendButton(m.chat, lenguajeGB['smsAvisoEG']() + idioma.text + '\n' + 'დ ```عرب```', wm, null, [[`☘️ 𝗠 𝗘 𝗡 𝗨`, `${usedPrefix}menu`]], fkontak, m)
   
-}else if (args[0] == 'pt'){
+}else if (args[0] == 'prgt'){
 global.lenguajeGB = pt
 await conn.sendButton(m.chat, lenguajeGB['smsAvisoEG']() + idioma.text + '\n' + 'დ ```Português```', wm, null, [[`☘️ 𝗠 𝗘 𝗡 𝗨`, `${usedPrefix}menu`]], fkontak, m)
 }else{
