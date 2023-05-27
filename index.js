@@ -45,16 +45,16 @@ const options = {
  space: true,
  maxLength: '0',
 }
-cfonts.say('RayXaXx\nlite\nmd'.trim(), options)
+cfonts.say('RayXaXx'.trim(), options)
 
 } catch (err) {
-say('RayXaXx\nLite\nMD', {
+say('RayXaXx', {
  font: 'chrome',
  align: 'center',
  gradient: ['red', 'magenta']
 })}
 
-say(`Desarrollado por RayXaXx`.trim(), {
+say(`Desarrollado por Josue`.trim(), {
  font: 'console',
  align: 'center',
  colors: ['candy']

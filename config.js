@@ -11,14 +11,7 @@ import { en, es, id, ar, pt } from './lib/idiomas/total-idiomas.js'
 //⊱ ━━━━━.⋅ Añada los numeros a ser Propietario/a | Add the numbers to be Owner ⋅.━━━━ ⊰   
 
 global.owner = [
-['593993684821', 'RayXaXx 🤖', true], 
-['519762543980', '𝙊𝙬𝙣𝙚𝙧 (1) 💻', true],  
-['972529277026', '𝙊𝙬𝙣𝙚𝙧 (2) 💻', true],  
-['51976254398', '𝘾𝙪𝙨𝙩𝙤𝙢𝙚𝙧 𝙎𝙪𝙥𝙥𝙤𝙧𝙩 🍓', true],
-['593968585383'], 
-['59894808483'],
-['5217441745001'],
-['5492266613038']]
+['51976254398', 'RayXaXx 🤖', true],]
 
 //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
@@ -101,10 +94,7 @@ global.author = 'RayXaXx 🤖'
 //⊱ ━━━━━.⋅ Versión | Nombre | cuentas ⋅.━━━━ ⊰
 
 global.official = [ // Agregate si eres Owner
-['18059196237', 'RayXaXx 🤖', 1], 
-['51976254398', '𝗗𝗲𝘀𝗮𝗿𝗿𝗼𝗹𝗹𝗮𝗱𝗼𝗿 𝗢𝗳𝗶𝗰𝗶𝗮𝗹 💻', 1],  
-['51976254398', '𝗖𝘂𝘀𝘁𝗼𝗺𝗲𝗿 𝗦𝘂𝗽𝗽𝗼𝗿𝘁 𝗢𝗳𝗶𝗰𝗶𝗮𝗹 🍓', 1],
-['51976254398', '𝗗𝗲𝘀𝗮𝗿𝗿𝗼𝗹𝗹𝗮𝗱𝗼𝗿𝗮 𝗢𝗳𝗶𝗰𝗶𝗮𝗹 💻', 1]] 
+['51976254398', 'RayXaXx 🤖', 1],] 
 
 global.mail = '' //agrega tú correo
 global.desc = '' //agrega una descripción corta
@@ -114,8 +104,8 @@ global.country = '' //agrega tú país ejemplo: 🇪🇨
 global.vs = '1.0.1'
 global.vsJB = '3.0'
 
-global.gt = 'RayXaXx 🤖'
-global.yt = 'https://youtube.com/@bossofc'
+global.gt = ''
+global.yt = ''
 global.yt2 = ''
 global.ig = ''
 global.md = ''
@@ -140,7 +130,7 @@ global.asistencia = '' //Dudas? escríbeme...
 
 //⊱ ━━━━━.⋅ Información | Information ⋅.━━━━ ⊰
 
-global.wm = 'RayXaXx 🤖 : RayXaXx 🤖'
+global.wm = 'creador : RayXaXx'
 global.igfg = 'RayXaXx 🤖'
 //global.wait = lenguajeGB.smsWait()
 global.nomorown = owner[0][0]
@@ -148,57 +138,36 @@ global.nomorown = owner[0][0]
 //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
 
-//⊱ ━━━━━.⋅ IMG ⋅.━━━━ ⊰
+global.img = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
+global.img2 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
 
-global.imagen1 = fs.readFileSync('./media/menus/Menu3.jpg')
-global.imagen2 = fs.readFileSync('./media/menus/img1.jpg')
-global.imagen3 = fs.readFileSync('./media/menus/img2.jpg')
-global.imagen4 = fs.readFileSync('./media/menus/img3.jpg')
-global.imagen5 = fs.readFileSync('./media/menus/img4.jpg')
-global.imagen6 = fs.readFileSync('./media/menus/img5.jpg')
-global.imagen7 = fs.readFileSync('./media/menus/img6.jpg')
-global.imagen8 = fs.readFileSync('./media/menus/img7.jpg')
-global.imagen9 = fs.readFileSync('./media/menus/img8.jpg')
-global.imagen10 = fs.readFileSync('./media/menus/img9.jpg')
-global.imagen11 = fs.readFileSync('./media/menus/img10.jpg')
-global.imagen12 = fs.readFileSync('./media/menus/img11.jpg')
-global.imagen13 = fs.readFileSync('./media/menus/img12.jpg')
+global.img3 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg' //ft rectangular
 
-//━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
+//global.img3 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpgh' //prem   //no
+//global.img4 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg' //prem   //no
 
+global.img5 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
+global.img6 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
+global.img7 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
+global.img8 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
+global.img9 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
 
-//━━━━━━━━━━━━━━ img ━━━━━━━━━
-
-global.img = 'https://i.imgur.com/AwlL9kc.jpeg'
-global.img2 = 'https://i.imgur.com/p18q1Ok.jpeg'
-
-global.img3 = 'https://i.imgur.com/01Z8a0a.jpg' //ft rectangular
-
-//global.img3 = 'https://i.imgur.com/oUAGYc2.jpg' //prem   //no
-//global.img4 = 'https://i.imgur.com/i0pccuo.jpg' //prem   //no
-
-global.img5 = 'https://i.imgur.com/80uz37R.jpeg'
-global.img6 = 'https://i.imgur.com/3zSvnGY.jpeg'
-global.img7 = 'https://i.imgur.com/WY4r6up.jpeg'
-global.img8 = 'https://i.imgur.com/qCO3RYa.jpeg'
-global.img9 = 'https://i.imgur.com/dWk51FS.jpeg'
-
-global.img10 = 'https://i.imgur.com/T4NjKMi.jpeg'
-global.img11 = 'https://i.imgur.com/jqyWSlh.jpeg'
-global.img12 = 'https://i.imgur.com/mpCRttm.jpeg'
-global.img13 = 'https://i.imgur.com/O04epJI.jpeg'
-global.img14 = 'https://i.imgur.com/jfbuJRU.jpeg'
-global.img15 = 'https://i.imgur.com/DzqUXkW.jpeg'
+global.img10 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
+global.img11 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
+global.img12 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
+global.img13 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
+global.img14 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
+global.img15 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
 
 //global.img16 = 'https://i.imgur.com/11MRjo4.jpeg' //+18   //no
 
-global.img17 = 'https://i.imgur.com/Y3ZWq7z.jpeg'
-global.img18 = 'https://i.imgur.com/kaUN1Nz.jpeg'
-global.img19 = 'https://i.imgur.com/7yJ22hJ.jpeg'
-global.img20 = 'https://i.imgur.com/qcD353P.jpeg'
-global.img21 = 'https://i.imgur.com/3fJTaX6.jpeg'
+global.img17 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
+global.img18 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
+global.img19 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
+global.img20 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
+global.img21 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
 
-global.img21 = 'https://i.imgur.com/akofqcE.jpeg' //paypal
+global.img21 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg' //paypal
 
 global.welgata = [ig, yt2, yt2, ig, md, ig, yt, paypal, yt2, yt2, ig, fb]
 global.redesMenu = [nna, nn, nnn, nnnt, nnntt, nnnttt, nnnttt2, nnnttt3, nnnttt4, nnnttt5, md, ig, paypal, yt, asistencia, fb]
