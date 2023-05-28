@@ -111,9 +111,9 @@ let menu = `*˚₊·˚₊· ͟͟͞͞➳❥ @${m.sender.split("@")[0]}*
 *│* ╰∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ ∙ ∙ ∙ ∙
  `.trim()
     
-const vi = ['https://s31.aconvert.com/convert/p3r68-cdx67/fudrk-3qhve.mp4',
-'https://s31.aconvert.com/convert/p3r68-cdx67/fudrk-3qhve.mp4',
-'https://s31.aconvert.com/convert/p3r68-cdx67/fudrk-3qhve.mp4']
+const vi = ['https://photos.google.com/share/AF1QipNsTuXS3A8jD_diAbIk0nhyUzm82nxCnEEwjLtYrV7m2f3TNuGl9iPqiiPtXxLhlw/photo/AF1QipOBjp7073d7KnQ5TVBAqlAxBy9XEIA7x8NPV6Yw?key=cWtqZjJFRVB3SmJpQk8xemZITExCaVFtbFVxeEZR',
+'https://photos.google.com/share/AF1QipNsTuXS3A8jD_diAbIk0nhyUzm82nxCnEEwjLtYrV7m2f3TNuGl9iPqiiPtXxLhlw/photo/AF1QipOBjp7073d7KnQ5TVBAqlAxBy9XEIA7x8NPV6Yw?key=cWtqZjJFRVB3SmJpQk8xemZITExCaVFtbFVxeEZR',
+'https://photos.google.com/share/AF1QipNsTuXS3A8jD_diAbIk0nhyUzm82nxCnEEwjLtYrV7m2f3TNuGl9iPqiiPtXxLhlw/photo/AF1QipOBjp7073d7KnQ5TVBAqlAxBy9XEIA7x8NPV6Yw?key=cWtqZjJFRVB3SmJpQk8xemZITExCaVFtbFVxeEZR']
 
 const getRandomImage = async () => {
 try {
