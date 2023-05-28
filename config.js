@@ -88,8 +88,8 @@ global.moment = moment
 
 //⊱ ━━━━━.⋅ Sticker WM ⋅.━━━━ ⊰
 
-global.packname = 'creador'
-global.author = 'RayXaXx 🤖'
+global.packname = '𝙍𝙖𝙮𝙓𝙖𝙓𝙭 𝘽𝙊𝙏'
+global.author = 'los unicos del 2A'
 
 //⊱ ━━━━━.⋅ Versión | Nombre | cuentas ⋅.━━━━ ⊰
 
