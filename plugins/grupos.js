@@ -106,7 +106,7 @@ let groupinfo = `
 🍁 ${lenguajeGB.smsInsGC1()}
 → ${data.id === undefined ? '❌' : data.id}
 
-� ${lenguajeGB.smsInsGC2()}
+🍁 ${lenguajeGB.smsInsGC2()}
 → ${data.subject === undefined ? '❌' : data.subject}
 
 ${lenguajeGB.smsInsGC3()}
