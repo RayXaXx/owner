@@ -40,8 +40,8 @@ let menu = `*˚₊·˚₊· ͟͟͞͞➳❥ @${m.sender.split("@")[0]}*
 *│* ┊▸ ✦ _${usedPrefix}${lenguajeGB.lenguaje() == 'es' ? 'mediafire *enlace*' : 'mediafiredl *link*'}_
 *│* ┊▸ ✦ _${usedPrefix}${lenguajeGB.lenguaje() == 'es' ? 'play *nombre o enlace*' : 'play *name*'}_
 *│* ┊▸ ✦ _${usedPrefix}${lenguajeGB.lenguaje() == 'es' ? 'tiktok *enlace*' : 'tkdl *link*'}_
-*│* ┊▸ ✦ _${usedPrefix}${lenguajeGB.lenguaje() == 'es' ? 'openiamage *texto*' : 'dalle *text*'}_
-*│* ┊▸ ✦ _${usedPrefix}${lenguajeGB.lenguaje() == 'es' ? 'midjourney *texto*' : 'openjourney *text*'}_
+*│* ┊▸ ✦ _${usedPrefix}${lenguajeGB.lenguaje() == 'es' ? 'fotoia *texto*' : 'fotoia *text*'}_
+*│* ┊▸ ✦ _${usedPrefix}${lenguajeGB.lenguaje() == 'es' ? 'fotoia2 *texto*' : 'fotoia2 *text*'}_
 *│* ╰∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ ∙ ∙ ∙ ∙ 
 *│*
 *╰ ㊂ ▸▸ _${lenguajeGB.smsMenuTotal5()}_ ◂◂*
@@ -98,38 +98,25 @@ let menu = `*˚₊·˚₊· ͟͟͞͞➳❥ @${m.sender.split("@")[0]}*
 *│* ┊▸ ✦ _${usedPrefix}${lenguajeGB.lenguaje() == 'es' ? 'actualizar' : 'update'}_
 *│* ┊▸ ✦ _${usedPrefix}${lenguajeGB.lenguaje() == 'es' ? 'banearchat' : 'banchat'}_
 *│* ┊▸ ✦ _${usedPrefix}${lenguajeGB.lenguaje() == 'es' ? 'desbanearchat' : 'unbanchat'}_
-*│* ┊▸ ✦ _${usedPrefix}${lenguajeGB.lenguaje() == 'es' ? 'salir' : 'leave'}_
-*│* ┊▸ ✦ _${usedPrefix}${lenguajeGB.lenguaje() == 'es' ? 'bloquear *@tag*' : 'block *@tag*'}_
-*│* ┊▸ ✦ _${usedPrefix}${lenguajeGB.lenguaje() == 'es' ? 'desbloquear *@tag*' : 'unblock *@tag*'}_
-*│* ┊▸ ✦ _${usedPrefix}${lenguajeGB.lenguaje() == 'es' ? 'obtenercodigo *nombre de archivo*' : 'getplugin *filename*'}_
-*│* ┊▸ ✦ _${usedPrefix}${lenguajeGB.lenguaje() == 'es' ? 'borrardatos *número*' : 'deletedatauser *number*'}_
-*│* ┊▸ ✦ _${usedPrefix}${lenguajeGB.lenguaje() == 'es' ? 'unete *enlace*' : 'join *link*'}_
-*│* ┊▸ ✦ _${usedPrefix}${lenguajeGB.lenguaje() == 'es' ? 'bcsubbot *texto*' : 'bcsubbot *text*'}_
-*│* ┊▸ ✦ _${usedPrefix}${lenguajeGB.lenguaje() == 'es' ? 'bcc *texto*' : 'bcchats *text*'}_
-*│* ┊▸ ✦ _${usedPrefix}${lenguajeGB.lenguaje() == 'es' ? 'bcgc *texto*' : 'broadcastgc *text*'}_
-*│* ┊▸ ✦ _${usedPrefix}${lenguajeGB.lenguaje() == 'es' ? 'bc *texto*' : 'broadcastall *text*'}_
-*│* ╰∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ ∙ ∙ ∙ ∙
  `.trim()
     
-const vi = ['https://photos.google.com/share/AF1QipNsTuXS3A8jD_diAbIk0nhyUzm82nxCnEEwjLtYrV7m2f3TNuGl9iPqiiPtXxLhlw/photo/AF1QipOBjp7073d7KnQ5TVBAqlAxBy9XEIA7x8NPV6Yw?key=cWtqZjJFRVB3SmJpQk8xemZITExCaVFtbFVxeEZR',
-'https://photos.google.com/share/AF1QipNsTuXS3A8jD_diAbIk0nhyUzm82nxCnEEwjLtYrV7m2f3TNuGl9iPqiiPtXxLhlw/photo/AF1QipOBjp7073d7KnQ5TVBAqlAxBy9XEIA7x8NPV6Yw?key=cWtqZjJFRVB3SmJpQk8xemZITExCaVFtbFVxeEZR',
-'https://photos.google.com/share/AF1QipNsTuXS3A8jD_diAbIk0nhyUzm82nxCnEEwjLtYrV7m2f3TNuGl9iPqiiPtXxLhlw/photo/AF1QipOBjp7073d7KnQ5TVBAqlAxBy9XEIA7x8NPV6Yw?key=cWtqZjJFRVB3SmJpQk8xemZITExCaVFtbFVxeEZR']
+const vi = ['https://i.ibb.co/cCCtsN6/37736061-68f4-4a4b-aa04-9b105a73bb1c.jpg']
 
 const getRandomImage = async () => {
 try {
-return { image: await vi.getRandom(), isVideo: true }
+return { image: await vi.getRandom(), imagen1: true }
 } catch (error) {
 try {
-return { image: await gataMenu.getRandom(), isVideo: false }
+return { image: await gataMenu.getRandom(), imagen1: false }
 } catch (error) {
 try {
-return { image: await gataImg.getRandom(), isVideo: false }
+return { image: await gataImg.getRandom(), imagen1: false }
 } catch (error) {
-return { image: imagen5, isVideo: false }
+return { image: imagen1, isVideo: false }
 }}}}
 
 const result = await getRandomImage();
-const filename = result.isVideo ? 'menu.mp4' : 'menu.jpg';
+const filename = result.imagen1 ? 'menu.mp4' : 'menu.jpg';
 await conn.sendFile(m.chat, result.image, filename, menu, fkontak, false, { mentions: [m.sender] })
 
 } catch (e) {

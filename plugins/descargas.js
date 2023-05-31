@@ -18,8 +18,8 @@ const isCommand8 = /^(mediafire(dl)?|dlmediafire)$/i.test(command)
 const isCommand9 = /^(ytmax)$/i.test(command)
 const isCommand10 = /^(tkdl|tiktok)$/i.test(command)
 const isCommand11 = /^(ytmaxdoc)$/i.test(command)
-const isCommand12 = /^(dalle|openiamage|aiimage|aiimg|aimage|iaimagen|openaimage|openaiimage)$/i.test(command)
-const isCommand13 = /^(openjourney|journey|midjourney)$/i.test(command)
+const isCommand12 = /^(fotoia2)$/i.test(command)
+const isCommand13 = /^(fotoia)$/i.test(command)
 
 async function reportError(e) {
 await m.reply(lenguajeGB['smsMalError3']() + '\n*' + lenguajeGB.smsMensError1() + '*\n*' + usedPrefix + `${lenguajeGB.lenguaje() == 'es' ? 'reporte' : 'report'}` + '* ' + `${lenguajeGB.smsMensError2()} ` + usedPrefix + command)
@@ -34,7 +34,7 @@ try{
 const res = await googleImage(text)
 let image = res.getRandom()
 let link = image
-conn.sendFile(m.chat, link, 'error.jpg', `*💞 Resultado de:* ${text}`, m)
+conn.sendFile(m.chat, link, 'error.jpg', `*Resultado de:* ${text}`, m)
 } catch (e) {
 reportError(e)
 } 
@@ -359,7 +359,7 @@ reportError(e)}
 break
 }}
 
-handler.command = /^(gimage|imagen?|play2?|fgmp3|dlmp3|getaud|yt(a|mp3)?|ytmp3doc|ytadoc|fgmp4|dlmp4|getvid|yt(v|mp4)?|ytmp4doc|ytvdoc|facebook|fb|facebookdl|fbdl|mediafire(dl)?|dlmediafire|ytmax|ytmaxdoc|tiktok|tkdl|dalle|openiamage|aiimage|aiimg|aimage|iaimagen|openaimage|openaiimage|openjourney|journey|midjourney)$/i
+handler.command = /^(gimage|imagen?|play2?|fgmp3|dlmp3|getaud|yt(a|mp3)?|ytmp3doc|ytadoc|fgmp4|dlmp4|getvid|yt(v|mp4)?|ytmp4doc|ytvdoc|facebook|fb|facebookdl|fbdl|mediafire(dl)?|dlmediafire|ytmax|ytmaxdoc|tiktok|tkdl|fotoia|fotoia2)$/i
 handler.register = true
 export default handler
 
