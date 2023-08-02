@@ -1,9 +1,26 @@
 {
-  "name": "RayXaXx", 
-  "description": "Bot ligero para WhatsApp",
-  "repository": "https://github.com/RayXaXx",
-  "logo": "https://i.imgur.com/AwlL9kc.jpg",
-  "keywords": ["java", "bot", "whatsapp-bot", "whatsapp-automation"],
+  "name": "RayXaXx-BOT",
+  "website": "https://youtube.com/@hades_bot2391",
+  "description": "Super Bot WhatsApp",
+  "repository": "https://github.com/RayXaXx/owner.git",
+  "logo": "https://i.imgur.com/AmzlKVi.jpeg",
+  "success_url": "",
+  "keywords": [
+    "nodejs",
+    "heroku",
+    "bot",
+    "bots",
+    "bot",
+    "spanish",
+    "whatsapp",
+    "termux",
+    "shadow",
+    "multi-device",
+    "md",
+    "whatsappbot",
+    "oficial",
+    "whatsapp-md",
+  "image": "heroku/nodejs",
   "buildpacks": [
     {
       "url": "heroku/nodejs"

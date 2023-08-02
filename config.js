@@ -1,212 +1,128 @@
-import { watchFile, unwatchFile } from 'fs'  
+import fs from 'fs'
+import { watchFile, unwatchFile } from 'fs'
 import chalk from 'chalk'
 import { fileURLToPath } from 'url'
-import fs from 'fs'
-import cheerio from 'cheerio'
-import fetch from 'node-fetch'
-import axios from 'axios'
-import moment from 'moment-timezone' 
-import { en, es, id, ar, pt } from './lib/idiomas/total-idiomas.js' 
-
-//⊱ ━━━━━.⋅ Añada los numeros a ser Propietario/a | Add the numbers to be Owner ⋅.━━━━ ⊰   
 
 global.owner = [
-['51976254398', 'RayXaXx 🤖', true],]
-
-//━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
-
-global.mods = [] 
-global.prems = []
-   
-  
-/*⊱ ━━━━━.⋅ IDIOMA : LENGUAJE ⋅.━━━━ ⊰  
-Agrega el Idioma que quieres que tenga RayXaXx
-Add the language you want RayXaXx to have
-  es = Español         id = Bahasa Indonesia
-  en = English         pt = Português 
-  ar = عرب
-*/
-global.lenguajeGB = es  //<--- [es, en, ar, id, pt] Escribir el código de Idioma
- 
-//━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
-
-
-global.openai_key = 'sk-0'
-/* Consigue tu ApiKey en este enlace: https://platform.openai.com/account/api-keys */
-
-global.openai_org_id = 'org-3'
-/* Consigue tu ID de organizacion en este enlace: https://platform.openai.com/account/org-settings */
-
-
-global.keysZens = ['LuOlangNgentot', 'c2459db922', '37CC845916', '6fb0eff124', 'hdiiofficial', 'fiktod', 'BF39D349845E', '675e34de8a', '0b917b905e6f']
-global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
-global.keysxteammm = ['29d4b59a4aa687ca', '5LTV57azwaid7dXfz5fzJu', 'cb15ed422c71a2fb', '5bd33b276d41d6b4', 'HIRO', 'kurrxd09', 'ebb6251cc00f9c63']
-global.keysxteam = keysxteammm[Math.floor(keysxteammm.length * Math.random())]
-global.keysneoxrrr = ['5VC9rvNx', 'cfALv5']
-global.keysneoxr = keysneoxrrr[Math.floor(keysneoxrrr.length * Math.random())]
-global.lolkeysapi = 'BrunoSobrino' //'SGWN'
-global.itsrose = ['4b146102c4d500809da9d1ff']
-
+  ['51902061233', 'RayXaXx', true],
+]
+global.suittag =['51902061233']
+global.mods = []
+global.prems = ['51902061233'], 
+global.prems = ['51902061233'],
 global.APIs = { 
+
+  amel: 'https://melcanz.com',
+  bx: 'https://bx-hunter.herokuapp.com',
+  nrtm: 'https://nurutomo.herokuapp.com',
   xteam: 'https://api.xteam.xyz',
+  nzcha: 'http://nzcha-apii.herokuapp.com',
+  bg: 'http://bochil.ddns.net',
+  fdci: 'https://api.fdci.se',
   dzx: 'https://api.dhamzxploit.my.id',
+  bsbt: 'https://bsbt-api-rest.herokuapp.com',
+  zahir: 'https://zahirr-web.herokuapp.com',
+  zeks: 'https://api.zeks.me',
+  hardianto: 'https://hardianto-chan.herokuapp.com',
+  pencarikode: 'https://pencarikode.xyz', 
+  LeysCoder: 'https://leyscoders-api.herokuapp.com',
+  adiisus: 'https://adiixyzapi.herokuapp.com',
   lol: 'https://api.lolhuman.xyz',
-  violetics: 'https://violetics.pw',
-  neoxr: 'https://api.neoxr.my.id',
-  zenzapis: 'https://api.zahwazein.xyz',
-  akuari: 'https://api.akuari.my.id',
-  akuari2: 'https://apimu.my.id',	
-  fgmods: 'https://api-fgmods.ddns.net',
-  botcahx: 'https://api.botcahx.biz.id',
-  ibeng: 'https://api.ibeng.tech/docs',	
-  rose: 'https://api.itsrose.site',
-  popcat : 'https://api.popcat.xyz',
-  xcoders : 'https://api-xcoders.site'
+  pencarikode: 'https://pencarikode.xyz',
+  Velgrynd: 'https://velgrynd.herokuapp.com',
+  rey: 'https://server-api-rey.herokuapp.com',
+  hardianto: 'http://hardianto-chan.herokuapp.com',
+  shadow: 'https://api.reysekha.xyz',
+  apialc: 'https://api-alc.herokuapp.com',
+  botstyle: 'https://botstyle-api.herokuapp.com',
+  neoxr: 'https://neoxr-api.herokuapp.com',
+  ana: 'https://anabotofc.herokuapp.com/',
+  kanx: 'https://kannxapi.herokuapp.com/',
+  dhnjing: 'https://dhnjing.xyz'
 },
+  
 global.APIKeys = { 
-  'https://api.xteam.xyz': `${keysxteam}`,
-  'https://api.lolhuman.xyz': '85faf717d0545d14074659ad',
-  'https://api.neoxr.my.id': `${keysneoxr}`,	
-  'https://violetics.pw': 'beta',
-  'https://api.zahwazein.xyz': `${keysxxx}`,
-  'https://api-fgmods.ddns.net': 'fg-dylux',
-  'https://api.botcahx.biz.id': 'Admin',
-  'https://api.ibeng.tech/docs': 'tamvan',
-  'https://api.itsrose.site': 'Rs-Zeltoria',
-  'https://api-xcoders.site': 'Frieren'
+  'https://api-alc.herokuapp.com': 'ConfuMods',
+  'https://api.reysekha.xyz': 'apirey',
+  'https://melcanz.com': 'F3bOrWzY',
+  'https://bx-hunter.herokuapp.com': 'Ikyy69',
+  'https://api.xteam.xyz': '5bd33b276d41d6b4',
+  'https://zahirr-web.herokuapp.com': 'zahirgans',
+  'https://bsbt-api-rest.herokuapp.com': 'benniismael',
+  'https://api.zeks.me': 'apivinz',
+  'https://hardianto-chan.herokuapp.com': 'hardianto',
+  'https://pencarikode.xyz': 'pais', 
+  'https://leyscoders-api.herokuapp.com': 'MIMINGANZ', 
+  'https://server-api-rey.herokuapp.com': 'apirey',
+  'https://api.lolhuman.xyz': '9b817532fadff8fc7cb86862',
+  'https://botstyle-api.herokuapp.com': 'Eyar749L',
+  'https://neoxr-api.herokuapp.com': 'yntkts',
+  'https://anabotofc.herokuapp.com/': 'AnaBot'
 }
 
+global.packname = 'RayXaXx-BOT'
+global.author = 'RayXaXx'
+global.vs = '1.10.90'
+global.version = vs
+global.gt = 'RayXaXx-BOT'
+global.hadesbot = gt
+global.yt = 'https://youtu.be/aPu9wQi-z8U'
+global.youtube = yt
+global.ig = 'https://www.instagram'
+global.hadesig = ig
+global.md = 'https://github.com/RayXaXx/owner.git'
+global.botxdf = md
+global.nn = 'https://chat.whatsapp.com/KlAYxPxLAkSGOyZxjygnt'
+global.nngrupo = nn
+global.nnn = 'https://chat.whatsapp.com/DDm7HC6e5MF9qcdfgtrd2RQ'
+global.nnngrupo = nnn
+global.paypal = 'https://pay'
+global.donar = paypal
+global.rg = '*🍀ʀᴇsᴜʟᴛᴀᴅᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴏ✨*'
+global.resultado = rg
+global.ag = '*⚠️ᴀᴅᴠᴇʀᴛᴇɴᴄɪᴀ⚠️*'
+global.advertencia = ag
+global.iig = '*📌ɪɴғᴏʀᴍᴀᴄɪᴏɴ*✨'
+global.informacion = iig
+global.fg = '*❌ʟᴏ sᴇɴᴛɪᴍᴏs sᴇ ʜᴀ ɢᴇɴᴇʀᴀᴅᴏ ᴜɴ ᴇʀʀᴏʀ ᴠᴜᴇʟᴠᴇ ɪɴᴛᴇɴᴛᴀʀ❌*'
+global.fallo = fg
+global.mg = '*❗ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ʟᴏ ʜᴀ ᴜsᴀᴅᴏ ɪɴᴄᴏʀʀᴇᴄᴛᴀᴍᴇɴᴛᴇ*'
+global.mal = mg
+global.eeg = '*📩ˢᵁ ᴿᴱᴾᴼᴿᵀᴱ ᴴᴬ ˢᴵᴰᴼ ᴱᴺⱽᴵᴬᴰᴼ📩*'
+global.envio = eeg
+global.eg = '*🍀ʀᴇsᴜʟᴛᴀᴅᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴏ✨*'
+global.exito = eg
+
+global.wm = 'RayXaXx\nRayXaXx-BOT'
+global.igfg = 'RayXaXx-BOT'
+global.wait = '⌛ _Cargando..._\n▰▰▰▱▱▱▱▱▱'
+
+global.imagen1 = fs.readFileSync('./views/grupo.jpg')
+global.imagen2 = fs.readFileSync('./views/nuevobot.jpg') 
+global.imagen3 = fs.readFileSync('./views/bot.jpg')
+global.imagen4 = fs.readFileSync('./views/nuevobot.jpg')
 global.mods = [] 
 
+global.multiplier = 65
 
-/*************************/
-global.cheerio = cheerio
-global.fs = fs
-global.fetch = fetch
-global.axios = axios
-global.moment = moment	
+global.rpg = {
+  emoticon(string) {
+    string = string.toLowerCase()
+    let emot = {
+      level: '🏆',
+      limit: '💎',
+      exp: '🕹️'
+    }
+    let results = Object.keys(emot).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string))
+    if (!results.length) return ''
+    else return emot[results[0][0]]
+  }
+}
 
-//⊱ ━━━━━.⋅ Sticker WM ⋅.━━━━ ⊰
-
-global.packname = '𝙍𝙖𝙮𝙓𝙖𝙓𝙭 𝘽𝙊𝙏'
-global.author = 'los unicos del 2A'
-
-//⊱ ━━━━━.⋅ Versión | Nombre | cuentas ⋅.━━━━ ⊰
-
-global.official = [ // Agregate si eres Owner
-['51976254398', 'RayXaXx 🤖', 1],] 
-
-global.mail = '' //agrega tú correo
-global.desc = '' //agrega una descripción corta
-global.desc2 = '' //agrega una descripción larga (Solo se aplicará si su whasapp no tiene descripción)
-global.country = '' //agrega tú país ejemplo: 🇪🇨
-
-global.vs = '1.0.1'
-global.vsJB = '3.0'
-
-global.gt = ''
-global.yt = ''
-global.yt2 = ''
-global.ig = ''
-global.md = ''
-global.fb = ''
-
-global.nna = '' //UPDATE RayXaXx
-global.nna2 = '' //Help
-global.nn = '' //Grupo 1
-global.nnn = '' //Grupo 2
-global.nnnt = '' //Grupo 3
-global.nnntt = '' //Grupo 4
-global.nnnttt = '' //Grupo 5
-global.nnnttt2 = '' //Grupo 6 COL
-global.nnnttt3 = '' //Grupo 7 COL
-global.nnnttt4 = '' //Grupo 8 COL
-global.nnnttt5 = '' //Grupo 9 COL
-global.paypal = ''
-global.asistencia = '' //Dudas? escríbeme...
-
-//━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
-
-
-//⊱ ━━━━━.⋅ Información | Information ⋅.━━━━ ⊰
-
-global.wm = 'creador : RayXaXx'
-global.igfg = 'RayXaXx 🤖'
-//global.wait = lenguajeGB.smsWait()
-global.nomorown = owner[0][0]
-
-//━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
-
-
-//⊱ ━━━━━.⋅ IMG ⋅.━━━━ ⊰
-
-global.imagen1 = fs.readFileSync('./media/menus/Menu3.jpg')
-global.imagen2 = fs.readFileSync('./media/menus/img1.jpg')
-global.imagen3 = fs.readFileSync('./media/menus/img2.jpg')
-global.imagen4 = fs.readFileSync('./media/menus/img3.jpg')
-global.imagen5 = fs.readFileSync('./media/menus/img4.jpg')
-global.imagen6 = fs.readFileSync('./media/menus/img5.jpg')
-global.imagen7 = fs.readFileSync('./media/menus/img6.jpg')
-global.imagen8 = fs.readFileSync('./media/menus/img7.jpg')
-global.imagen9 = fs.readFileSync('./media/menus/img8.jpg')
-global.imagen10 = fs.readFileSync('./media/menus/img9.jpg')
-global.imagen11 = fs.readFileSync('./media/menus/img10.jpg')
-global.imagen12 = fs.readFileSync('./media/menus/img11.jpg')
-global.imagen13 = fs.readFileSync('./media/menus/img12.jpg')
-
-//━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
-
-
-//━━━━━━━━━━━━━━ img ━━━━━━━━━
-
-global.img = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
-global.img2 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
-
-global.img3 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg' //ft rectangular
-
-//global.img3 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpgh' //prem   //no
-//global.img4 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg' //prem   //no
-
-global.img5 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
-global.img6 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
-global.img7 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
-global.img8 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
-global.img9 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
-
-global.img10 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
-global.img11 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
-global.img12 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
-global.img13 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
-global.img14 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
-global.img15 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
-
-//global.img16 = 'https://i.imgur.com/11MRjo4.jpeg' //+18   //no
-
-global.img17 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
-global.img18 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
-global.img19 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
-global.img20 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
-global.img21 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg'
-
-global.img21 = 'https://i.ibb.co/SykbvXg/Menu3-copia.jpg' //paypal
-
-global.welgata = [ig, yt2, yt2, ig, md, ig, yt, paypal, yt2, yt2, ig, fb]
-global.redesMenu = [nna, nn, nnn, nnnt, nnntt, nnnttt, nnnttt2, nnnttt3, nnnttt4, nnnttt5, md, ig, paypal, yt, asistencia, fb]
-global.gataMenu = [img, img2, img6, img7, img8, img9, img13, img14, img15, img17, img18, img19, img20, img21]
-global.gataImg = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8, imagen9, imagen10, imagen11, imagen12, imagen13]
-
-//━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
-
-global.htki = '*⭑•̩̩͙⊱•••• ☪*'
-global.htka = '*☪ ••••̩̩͙⊰•⭑*'
-global.htjava = '⫹⫺'
-global.wait = lenguajeGB['smsMeWait']()
-
-global.multiplier = 60 // Cuanto más alto, más difícil subir de nivel 
 
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {
-unwatchFile(file)
-console.log(chalk.bold.greenBright(lenguajeGB['smsConfigBot']().trim()))
-import(`${file}?update=${Date.now()}`)
+  unwatchFile(file)
+  console.log(chalk.redBright("Update 'config.js'"))
+  import(`${file}?update=${Date.now()}`)
 })
