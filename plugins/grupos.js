@@ -1,131 +1,69 @@
 import fetch from 'node-fetch'
-import * as baileys from '@adiwajshing/baileys'
-
-let handler = async (m, { conn, command, usedPrefix, args, participants, groupMetadata, text }) => {
-let pp, groupAdmins, listAdmin, owner
-const isCommand1 = /^(infogrupo|gro?upinfo|info(gro?up|gc))$/i.test(command)
-const isCommand2 = /^(admins|@admins|dmins)$/i.test(command)
-const isCommand3 = /^(enlace|link(gro?up)?)$/i.test(command)
-const isCommand4 = /^(inspect|inspeccionar|revisar)$/i.test(command)
-
-async function reportError(e) {
-await m.reply(lenguajeGB['smsMalError3']() + '\n*' + lenguajeGB.smsMensError1() + '*\n*' + usedPrefix + `${lenguajeGB.lenguaje() == 'es' ? 'reporte' : 'report'}` + '* ' + `${lenguajeGB.smsMensError2()} ` + usedPrefix + command)
-console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`)
-console.log(e)
-}
-
-switch (true) {     
-case isCommand1:
-try{
-pp = await conn.profilePictureUrl(m.chat, 'image').catch(_ => null) || './src/grupos.jpg' 
-groupAdmins = participants.filter(p => p.admin) 
-listAdmin = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`).join('\n')
-owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
-let info = 
-`✤ ${lenguajeGB['smsGI1']()} ✤
-⎔ ${lenguajeGB['smsGI2']()}
-・ ${groupMetadata.id}
-
-⎔ ${lenguajeGB['smsGI3']()}
-・ ${groupMetadata.subject}
-
-⎔ ${lenguajeGB['smsGI4']()}
-・ ${groupMetadata.desc?.toString() || lenguajeGB['smsGI5']()}
-
-⎔ ${lenguajeGB['smsGI6']()}
-・ ${participants.length} ${lenguajeGB['smsGI7']()}
-
-⎔ ${lenguajeGB['smsGI8']()}
-・ @${owner.split('@')[0]}
-
-⎔ ${lenguajeGB['smsGI9']()}
-${listAdmin}
-`.trim()
-  
-await conn.sendFile(m.chat, pp, 'error.jpg', info, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })    
-} catch (e) {
-reportError(e)
-}
-break
-    
-case isCommand2:
-try{
-pp = await conn.profilePictureUrl(m.chat, 'image').catch(_ => null) || './src/admins.jpg'
-groupAdmins = participants.filter(p => p.admin)
-listAdmin = groupAdmins.map((v, i) => `*» ${i + 1}. @${v.id.split('@')[0]}*`).join('\n')
-owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
-let pesan = args.join` `
-let oi = `${lenguajeGB.smsAddB5()} ${pesan ? '_' + pesan + '_' : "📣📣📣📣"}`
-let textoA = `⭔ ${lenguajeGB.smsAddB3()}
-⭔ ${oi}\n\n`
-let textoB = `${listAdmin}\n
-⛔ ${lenguajeGB.smsAddB4()} ⛔`.trim()
-await conn.sendFile(m.chat, pp, 'error.jpg', textoA + textoB, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
-} catch (e) {
-reportError(e)
-} 
-break
-    
-case isCommand3:
-let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-let mentionedJid = [who]
-let username = conn.getName(who)
-let group = m.chat
-pp = await conn.profilePictureUrl(m.chat, 'image').catch(_ => null) || './src/grupos.jpg' 
-let fsizedoc = '1'.repeat(10)
-try{
-await conn.sendFile(m.chat, pp, 'error.jpg', '*https://chat.whatsapp.com/' + await conn.groupInviteCode(group) + '*', m)
-} catch (e) {
-reportError(e)
-} 
-break
-
-//FUNCIÓN HECHA POR https://github.com/Azami19
-case isCommand4:
-let [, code] = text.match(/chat\.whatsapp\.com\/(?:invite\/)?([0-9A-Za-z]{20,24})/i) || []
-if (!code) throw lenguajeGB.smsMalused() + usedPrefix + command + ' ' + nna 
-try{
-const extractGroupMetadata = (result) => {
-const group = baileys.getBinaryNodeChild(result, 'group')
-const descChild = baileys.getBinaryNodeChild(group, 'description')
-let desc
-if (descChild) desc = baileys.getBinaryNodeChild(descChild, 'body')?.content
-const metadata = {
-id: group.attrs.id.includes('@') ? group.attrs.id : baileys.jidEncode(group.attrs.id, 'g.us'),
-subject: group.attrs.subject,
-creation: new Date(+group.attrs.creation * 1000).toLocaleString('id', { timeZone: 'America/Los_Angeles' }),
-owner: group.attrs.creator ? 'wa.me/' + baileys.jidNormalizedUser(group.attrs.creator).split('@')[0] : undefined,
-desc
-}
-return metadata
-}  
-let res = await conn.query({ tag: 'iq', attrs: { type: 'get', xmlns: 'w:g2', to: '@g.us' }, content: [{ tag: 'invite', attrs: { code } }] }),
-data = extractGroupMetadata(res),
-txt = Object.keys(data).map(v => `*${v.capitalize()}:* ${data[v]}`).join('\n')
-let groupinfo = `
-🍁 ${lenguajeGB.smsInsGC1()}
-→ ${data.id === undefined ? '❌' : data.id}
-
-🍁 ${lenguajeGB.smsInsGC2()}
-→ ${data.subject === undefined ? '❌' : data.subject}
-
-${lenguajeGB.smsInsGC3()}
-→ ${data.creation === undefined ? '❌' : data.creation}
-
-${lenguajeGB.smsInsGC4()}
-→ ${data.owner === undefined ? '❌' : data.owner}
-
- ${lenguajeGB.smsInsGC5()}
-→ ${data.desc === undefined ? '❌' : data.desc}
-`.trim()
-await conn.sendFile(m.chat, gataImg.getRandom(), 'error.jpg', groupinfo, m)
-} catch (e) {
-reportError(e)
-}   
-break
+let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, isPrems }) => {
+try {
+let pp = imagen1
+//let vn = './A/naa.mp3'
+let img = await(await fetch('https://i.imgur.com/JP52fdP.jpg')).buffer()
+let d = new Date(new Date + 3600000)
+let locale = 'es'
+let week = d.toLocaleDateString(locale, { weekday: 'long' })
+let date = d.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })
+let _uptime = process.uptime() * 1000
+let uptime = clockString(_uptime)
+let user = global.db.data.users[m.sender]
+let { money, joincount } = global.db.data.users[m.sender]
+let { exp, limit, level, role } = global.db.data.users[m.sender]
+let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length 
+let more = String.fromCharCode(8206)
+let readMore = more.repeat(850)   
+let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
+let str = `「ꨄ︎ *RayXaXx-BOT* ꨄ︎」
+❱➭ *𝗛ᴏʟᴀ,➟${taguser}*
+❱➭ *ᴏᴡɴᴇʀ:ᴏғᴄ➟ʏᴏᴠᴀɴɪ*
+❱➭ *Número➟51902061233*
+❱➭ *canal-YouTube*
+❱➭ *https://youtube.com/@hades_bot2391*
+❱➭ *ғᴇᴄʜᴀ:➟${date}*
+❱➭ *ᴛɪᴇᴍᴘᴏ ᴀᴄᴛɪᴠᴏ:➟${uptime}*
+❱➭ *ᴜsᴜᴀʀɪᴏs:➟${rtotalreg}*
+╰━━━━━━━━━━━━━━
+ꨄ︎-----  -----  -----  -----  -----ꨄ︎
+╭「ꨄ︎ *Grupos y cuentas* ꨄ︎」
+❱➭ *𝙷𝙰𝙳𝙴𝚂-𝙱𝙾𝚃-𝙾𝙼𝙴𝙶𝙰*
+❱➭ *https://chat.whatsapp.com/BgyxmpSY2VYE3MT0UbLAgf*
+❱➭ *𝙷𝙰𝙳𝙴𝚂-𝙱𝙾𝚃-𝙾𝙼𝙴𝙶𝙰*
+❱➭ *https://chat.whatsapp.com/DpRVuXpKRF43iMOEtg85wz*
+❱➭ *RayXaXx-BOT*
+❱➭ *https://chat.whatsapp.com/BuloWd29LSnDZHXtUJDybF*
+❱➭ *𝚙á𝚐𝚒𝚗𝚊 𝚍𝚎 𝙵𝚊𝚌𝚎𝚋𝚘𝚘𝚔*
+❱➭ *https://www.facebook.com/groups/987464505464904/?ref=share*
+❱➭ *𝚌𝚊𝚗𝚊𝚕 𝚍𝚎 𝚈𝚘𝚞𝚃𝚞𝚋𝚎*
+❱➭ *https://youtube.com/@hades_bot2391*
+❱➭ *𝚌𝚊𝚗𝚊𝚕 𝚍𝚎 𝚍𝚒𝚜𝚌𝚘𝚛𝚍*
+❱➭ *https://discord.gg/nQVWW6xv*
+❱➭ *INSTAGRAM*
+❱➭ *https://instagram.com/ofc.yovani.bot?igshid=ZDc4ODBmNjlmNQ==*
+❱➭ *KIKTOK*
+❱➭ *https://vm.tiktok.com/ZM2rbFWnr/*
+︎╰━━━━━━━━━━━━━━`.trim()
+if (m.isGroup) {
+//await conn.sendFile(m.chat, vn, 'naa.mp3', null, m, true, { type: 'audioMessage', ptt: true})
+let fkontak2 = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }  
+conn.sendMessage(m.chat, { image: pp, caption: str.trim(), mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net')}, { quoted: fkontak2 })  
+} else {    
+//await conn.sendFile(m.chat, vn, 'naa.mp3', null, m, true, { type: 'audioMessage', ptt: true})
+let fkontak2 = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }  
+conn.sendMessage(m.chat, { image: pp, caption: str.trim(), mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net')}, { quoted: fkontak2 })}
+} catch {
+conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝚈 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙴𝙽𝚅𝙸𝙰𝚁𝙻𝙾, 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃*', m)
 }}
-
-handler.command = /^(infogrupo|gro?upinfo|info(gro?up|gc)|admins|@admins|dmins|enlace|link(gro?up)?|inspect|inspeccionar|revisar)$/i
-handler.group = true
+handler.command = /^(grupos|Grupos|GRUPOS|grùpos)$/i
+handler.exp = 50
 handler.register = true
+handler.fail = null
 export default handler
+function clockString(ms) {
+let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
