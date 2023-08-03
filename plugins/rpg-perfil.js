@@ -2,7 +2,7 @@ import { createHash } from 'crypto'
 import PhoneNumber from 'awesome-phonenumber'
 import fetch from 'node-fetch'
 let handler = async(m, { conn, usedPrefix, participants, isPrems }) => {
-let pp = 'https://i.ibb.co/cCCtsN6/37736061-68f4-4a4b-aa04-9b105a73bb1c.jpg'
+let pp = 'https://i.imgur.com/HE1dWt6.png'
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 if (!(who in global.db.data.users)) throw `El usuario que está mencionando no está registrado en mi base de datos`
 try {
@@ -13,9 +13,9 @@ let { name, role, level, limit, money, exp, joincount, lastclaim, registered, re
 let username = conn.getName(who)
 let prem = global.prems.includes(who.split `@` [0])
 let sn = createHash('md5').update(who).digest('hex')
-let str = `┌「RayXaXx-BOT」
+let str = `┌「ꨄ︎𝙷𝙰𝚃𝚂𝚄𝙽𝙴-𝙼𝙸𝙺𝚄-𝚄𝙻𝚃𝚁𝙰ꨄ︎」
 ❱➭ *𝙽𝙾𝙼𝙱𝚁𝙴:* ${username} ${registered ? '(' + name + ') ': ''}
-❱➭ *🌐𝙻𝙸𝙽𝙺:* wa.me/${who.split`@`[0]}${registered ? '\n❱➭ *💥𝙴𝙳𝙰𝙳:* ' + age + ' años' : ''}
+❱➭ *🌐𝙻𝙸𝙽𝙺:* wa.me/${who.split`@`[0]}${registered ? '\n*𝙴𝙳𝙰𝙳:* ' + age + ' años' : ''}
 ❱➭ *💥𝚁𝙴𝙶𝙸𝚂𝚃𝚁𝙰𝙳𝙾:* ${registered ? 'Si': 'No'}
 ❱➭ *📝𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴 𝚂𝙴𝚁𝙸𝙴:* 
 ❱➭ *${sn}*
