@@ -3,7 +3,7 @@ let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, isP
 try {
 let pp = imagen1
 //let vn = './A/naa.mp3'
-let img = await(await fetch('https://i.imgur.com/JP52fdP.jpg')).buffer()
+let img = await(await fetch('https://i.ibb.co/cCCtsN6/37736061-68f4-4a4b-aa04-9b105a73bb1c.jpg')).buffer()
 let d = new Date(new Date + 3600000)
 let locale = 'es'
 let week = d.toLocaleDateString(locale, { weekday: 'long' })
@@ -19,7 +19,7 @@ let readMore = more.repeat(850)
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let str = `「ꨄ︎ *RayXaXx-BOT* ꨄ︎」
 ❱➭ *𝗛ᴏʟᴀ,➟${taguser}*
-❱➭ *ᴏᴡɴᴇʀ:ᴏғᴄ➟ʏᴏᴠᴀɴɪ*
+❱➭ *ᴏᴡɴᴇʀ:RayXaXx*
 ❱➭ *Número➟51902061233*
 ❱➭ *canal-YouTube*
 ❱➭ *https://youtube.com/@hades_bot2391*
