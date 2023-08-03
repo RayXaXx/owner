@@ -73,7 +73,7 @@ await await conn.sendMessage(m.chat, { document: { url: dl_url }, fileName: `${t
 } catch {   
 try {  
 let mediaa = await ytMp4(yt_play[0].url)
-await conn.sendMessage(m.chat, { document: { url: mediaa.result }, fileName: `error.mp4`, caption: `©𝙷𝙰𝙳𝙴𝚂-𝙱𝙾𝚃-𝙾𝙼𝙴𝙶𝙰﹏`, thumbnail: mediaa.thumb, mimetype: 'video/mp4' }, { quoted: m })     
+await conn.sendMessage(m.chat, { document: { url: mediaa.result }, fileName: `error.mp4`, caption: `©RayXaXx`, thumbnail: mediaa.thumb, mimetype: 'video/mp4' }, { quoted: m })     
 } catch {  
 try {
 let lolhuman = await fetch(`https://api.lolhuman.xyz/api/ytvideo2?apikey=${lolkeysapi}&url=${yt_play[0].url}`)    
