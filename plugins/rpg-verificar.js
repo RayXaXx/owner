@@ -18,16 +18,14 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
   user.registered = true
   let sn = createHash('md5').update(m.sender).digest('hex')
   m.reply(`📃REGISTRO COMPLETO
-☃️ NOMBRE ${name}
-☃️ EDAD ${age}
-📃NUMERO DE SERIE
+☃️ NOMBRE: ${name}
+☃️ EDAD: ${age}
+📃NUMERO DE SERIE:
  ${sn}
 
-"GRACIAS POR REGISTRARTE"
+📃SI DESEAS ELIMINAR TU REGISTRO; ELIMINA TU NUMERO DE SERIE
 
-📃SI DECEAS ELIMINAR TU REGISTRO ELIMINA TU NUMERO DE SERIE
-
-EJEMPLO
+EJEMPLO:
 🪪/unreg ${sn}
 
 DESPUES TE VUELVES A REGISTRAR`.trim())
