@@ -12,7 +12,7 @@ let handler = async (m, {conn, text }) => {
 ❱➭🍀 *${v.title}* (${v.url})
 ❱➭🫐 *_Link :_* ${v.url}
 ❱➭🕒 *_Duration:* ${v.timestamp}
-❱➭🌴 *DURATION* ${v.durationH}
+❱➭ *DURATION* ${v.durationH}
 ❱➭📌 *PUBLISHED* ${v.publishedTime}
 ❱➭📥 *UPLOADED* ${v.ago}
 ❱➭👁 *VIEWS* ${v.views}
