@@ -5,7 +5,7 @@ let text = `┌「ꨄ🧿 *︎owner* 💥ꨄ︎」
 ❱➭Wa.me/51902061233 (CREADOR)
 ❱➭Wa.me/5212411261883 (CREADOR) 
 ❱➭Wa.me/5212411719888 (CREADOR)
-❱➭Wa.me/5212411347465 (CREADOR)
+❱➭Wa.me/51902061233 (CREADOR)
 ╰━━━━━━━━━━━━━━`.trim()   
 let buttonMessage= {
 'document': { url: `https://github.com/RayXaXx/owner.git` },
