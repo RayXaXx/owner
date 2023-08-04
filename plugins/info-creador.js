@@ -5,7 +5,7 @@ let text = `┌「ꨄ🧿 *︎owner* 💥ꨄ︎」
 ❱➭Wa.me/51902061233 (CREADOR)
 ╰━━━━━━━━━━━━━━`.trim()   
 let buttonMessage= {
-'document': { url: `XXXXXXXXXXXXXXXX` },
+'document': { url: `https://github.com/RayXaXx/owner.git` },
 'mimetype': `application/${document}`,
 'fileName': `RayXaXx-BOT`,
 'fileLength': 99999999999999,
@@ -14,7 +14,7 @@ let buttonMessage= {
 'forwardingScore': 200,
 'isForwarded': true,
 'externalAdReply': {
-'mediaUrl': 'XXXXXXXXXXXXXXXX',
+'mediaUrl': 'https://github.com/RayXaXx/owner.git',
 'mediaType': 2,
 'previewType': 'pdf',
 'title': 'ᴇʟ ᴍᴇᴊᴏʀ ʙᴏᴛ ᴅᴇ ᴡʜᴀᴛsᴀᴘᴘ⁩',
