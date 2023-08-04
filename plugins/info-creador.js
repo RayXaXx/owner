@@ -3,12 +3,9 @@ var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.present
 var document = doc[Math.floor(Math.random() * doc.length)]    
 let text = `┌「ꨄ🧿 *︎owner* 💥ꨄ︎」
 ❱➭Wa.me/51902061233 (CREADOR)
-❱➭Wa.me/5212411261883 (CREADOR) 
-❱➭Wa.me/5212411719888 (CREADOR)
-❱➭Wa.me/51902061233 (CREADOR)
 ╰━━━━━━━━━━━━━━`.trim()   
 let buttonMessage= {
-'document': { url: `https://github.com/RayXaXx/owner.git` },
+'document': { url: `XXXXXXXXXXXXXXXX` },
 'mimetype': `application/${document}`,
 'fileName': `RayXaXx-BOT`,
 'fileLength': 99999999999999,
@@ -17,13 +14,13 @@ let buttonMessage= {
 'forwardingScore': 200,
 'isForwarded': true,
 'externalAdReply': {
-'mediaUrl': 'https://github.com/RayXaXx/owner.git',
+'mediaUrl': 'XXXXXXXXXXXXXXXX',
 'mediaType': 2,
 'previewType': 'pdf',
 'title': 'ᴇʟ ᴍᴇᴊᴏʀ ʙᴏᴛ ᴅᴇ ᴡʜᴀᴛsᴀᴘᴘ⁩',
 'body': wm,
 'thumbnail': imagen1,
-'sourceUrl': 'https://youtu.be/4eA5nDxPjOA' }},
+'sourceUrl': 'IA-BOT' }},
 'caption': text,
 'footer': wm,
 //'buttons':[
