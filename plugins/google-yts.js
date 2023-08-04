@@ -8,7 +8,7 @@ let handler = async (m, {conn, text }) => {
   let tes = results.all
   let teks = results.all.map(v => {
     switch (v.type) {
-      case 'video': return `「ꨄ︎RayXaXx-BOTꨄ︎」
+      case 'video': return `「RayXaXx-BOT」
 ❱➭🍀 *${v.title}* (${v.url})
 ❱➭🫐 *_Link :_* ${v.url}
 ❱➭🕒 *_Duration:* ${v.timestamp}

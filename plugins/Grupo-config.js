@@ -8,7 +8,7 @@ let isClose = { // Switch Case Like :v
 'cerrar': 'announcement',
 }[(args[0] || '')]
 if (isClose === undefined)
-throw `「ꨄ︎RayXaXx-BOTꨄ︎」
+throw `「RayXaXx-BOT」
 ❱➭ *[❗] 𝙵𝙾𝚁𝙼𝙰𝚃𝙾 𝙴𝚁𝚁𝙾𝙽𝙴𝙾!!*
 ❱➭ *✨𝙴𝙹𝙴𝙼𝙿𝙻𝙾✨* 
 ❱➭ *${usedPrefix + command} abrir*

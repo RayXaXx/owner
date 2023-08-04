@@ -14,7 +14,7 @@ let handler = async (m, { conn, isAdmin, isOwner, args, usedPrefix, command }) =
       '0': 'announcement',
   }[(args[0] || '')]
   if (isClose === undefined) {
-	  let caption = `「ꨄ︎RayXaXx-BOTꨄ︎」
+	  let caption = `「RayXaXx-BOT」
 ❱➭ *[❗] 𝙵𝙾𝚁𝙼𝙰𝚃𝙾 𝙴𝚁𝚁𝙾𝙽𝙴𝙾!!*
 ❱➭ *✨𝙴𝙹𝙴𝙼𝙿𝙻𝙾✨*
 ❱➭ *${usedPrefix + command} open 1*

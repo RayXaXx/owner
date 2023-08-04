@@ -15,7 +15,7 @@ if (command === 'play3') {
 additionalText = 'audio 🔊'
 } else if (command === 'play4') {
 additionalText = 'video 🎥'}
-let texto1 = `┌「 *ꨄ︎RayXaXx-BOTꨄ︎* 」
+let texto1 = `┌「 *RayXaXx-BOT* 」
 ❱➭➤ ༴⃟🌹๋ོ࣭ꦿ⁩PLAYDOCU-YouTube--⦿
 ⇄    ◁   ㅤ  ❚❚ㅤ   ▷ㅤ    ↻
 ❱➭➤͜͡🎶📌 *name:* ${yt_play[0].title}

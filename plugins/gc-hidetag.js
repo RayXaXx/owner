@@ -31,7 +31,7 @@ conn.sendMessage(m.chat, { audio: mediax, mentions: users, mimetype: 'audio/mp4'
 var mediax = await quoted.download?.()
 conn.sendMessage(m.chat, {sticker: mediax, mentions: users}, { quoted: m })
 } else {
-await conn.relayMessage(m.chat, {extendedTextMessage:{text: `${masss}\n${htextos}\n`, ...{ contextInfo: { mentionedJid: users, externalAdReply: { thumbnail: imagen1, sourceUrl: 'https://github.com/RayXaXx/owner' }}}}}, {})
+await conn.relayMessage(m.chat, {extendedTextMessage:{text: `${masss}\n${htextos}\n`, ...{ contextInfo: { mentionedJid: users, externalAdReply: { thumbnail: imagen1, sourceUrl: 'https://i.ibb.co/3rQfcqY/LOGO-ACTUAL-RAYXAXX.jpg' }}}}}, {})
 }}}
 handler.command = /^(hidetag|notificar|notify)$/i
 handler.group = true
