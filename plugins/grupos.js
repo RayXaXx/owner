@@ -3,7 +3,7 @@ let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, isP
 try {
 let pp = imagen1
 //let vn = './A/naa.mp3'
-let img = await(await fetch('https://i.ibb.co/cCCtsN6/37736061-68f4-4a4b-aa04-9b105a73bb1c.jpg')).buffer()
+let img = await(await fetch('https://i.ibb.co/3rQfcqY/LOGO-ACTUAL-RAYXAXX.jpg')).buffer()
 let d = new Date(new Date + 3600000)
 let locale = 'es'
 let week = d.toLocaleDateString(locale, { weekday: 'long' })
@@ -19,33 +19,14 @@ let readMore = more.repeat(850)
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let str = `「ꨄ︎ *RayXaXx-BOT* ꨄ︎」
 ❱➭ *𝗛ᴏʟᴀ,➟${taguser}*
-❱➭ *ᴏᴡɴᴇʀ:RayXaXx*
+❱➭ *ᴏᴡɴᴇʀ:➟RayXaXx*
 ❱➭ *Número➟51902061233*
-❱➭ *canal-YouTube*
-❱➭ *https://youtube.com/@hades_bot2391*
 ❱➭ *ғᴇᴄʜᴀ:➟${date}*
 ❱➭ *ᴛɪᴇᴍᴘᴏ ᴀᴄᴛɪᴠᴏ:➟${uptime}*
-❱➭ *ᴜsᴜᴀʀɪᴏs:➟${rtotalreg}*
 ╰━━━━━━━━━━━━━━
 ꨄ︎-----  -----  -----  -----  -----ꨄ︎
-╭「ꨄ︎ *Grupos y cuentas* ꨄ︎」
-❱➭ *𝙷𝙰𝙳𝙴𝚂-𝙱𝙾𝚃-𝙾𝙼𝙴𝙶𝙰*
-❱➭ *https://chat.whatsapp.com/BgyxmpSY2VYE3MT0UbLAgf*
-❱➭ *𝙷𝙰𝙳𝙴𝚂-𝙱𝙾𝚃-𝙾𝙼𝙴𝙶𝙰*
-❱➭ *https://chat.whatsapp.com/DpRVuXpKRF43iMOEtg85wz*
-❱➭ *RayXaXx-BOT*
-❱➭ *https://chat.whatsapp.com/BuloWd29LSnDZHXtUJDybF*
-❱➭ *𝚙á𝚐𝚒𝚗𝚊 𝚍𝚎 𝙵𝚊𝚌𝚎𝚋𝚘𝚘𝚔*
-❱➭ *https://www.facebook.com/groups/987464505464904/?ref=share*
-❱➭ *𝚌𝚊𝚗𝚊𝚕 𝚍𝚎 𝚈𝚘𝚞𝚃𝚞𝚋𝚎*
-❱➭ *https://youtube.com/@hades_bot2391*
-❱➭ *𝚌𝚊𝚗𝚊𝚕 𝚍𝚎 𝚍𝚒𝚜𝚌𝚘𝚛𝚍*
-❱➭ *https://discord.gg/nQVWW6xv*
-❱➭ *INSTAGRAM*
-❱➭ *https://instagram.com/ofc.yovani.bot?igshid=ZDc4ODBmNjlmNQ==*
-❱➭ *KIKTOK*
-❱➭ *https://vm.tiktok.com/ZM2rbFWnr/*
-︎╰━━━━━━━━━━━━━━`.trim()
+
+No hay grupos disponibles...`.trim()
 if (m.isGroup) {
 //await conn.sendFile(m.chat, vn, 'naa.mp3', null, m, true, { type: 'audioMessage', ptt: true})
 let fkontak2 = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }  

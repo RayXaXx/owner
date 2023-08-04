@@ -6,7 +6,7 @@ contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: nul
 title: '𝙻𝙸𝙽𝙺 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾',
 body: 'RayXaXx-BOT',         
 previewType: 0, thumbnail: fs.readFileSync("./views/Menu.jpg"),
-sourceUrl: `https://i.ibb.co/3rQfcqY/LOGO-ACTUAL-RAYXAXX.jpg.git`}}})   
+sourceUrl: `IA-BOT`}}})   
 }
 handler.help = ['linkgroup']
 handler.tags = ['group']
