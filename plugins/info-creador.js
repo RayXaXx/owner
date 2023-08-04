@@ -7,7 +7,7 @@ let text = `┌「ꨄ🧿 *︎owner* 💥ꨄ︎」
 let buttonMessage= {
 'document': { url: `https://github.com/RayXaXx/owner.git` },
 'mimetype': `application/${document}`,
-'fileName': `virus`,
+'fileName': `RayXaXx-BOT`,
 'fileLength': 99999999999999,
 'pageCount': 200,
 'contextInfo': {

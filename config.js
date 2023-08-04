@@ -60,21 +60,21 @@ global.APIKeys = {
   'https://anabotofc.herokuapp.com/': 'AnaBot'
 }
 
-global.packname = 'RayXaXx-BOT'
+global.packname = 'OWNER'
 global.author = 'RayXaXx'
 global.vs = '1.10.90'
 global.version = vs
 global.gt = 'RayXaXx-BOT'
 global.hadesbot = gt
-global.yt = 'https://youtu.be/aPu9wQi-z8U'
+global.yt = ''
 global.youtube = yt
 global.ig = 'https://www.instagram'
 global.hadesig = ig
 global.md = 'https://github.com/RayXaXx/owner.git'
 global.botxdf = md
-global.nn = 'https://chat.whatsapp.com/KlAYxPxLAkSGOyZxjygnt'
+global.nn = ''
 global.nngrupo = nn
-global.nnn = 'https://chat.whatsapp.com/DDm7HC6e5MF9qcdfgtrd2RQ'
+global.nnn = ''
 global.nnngrupo = nnn
 global.paypal = 'https://pay'
 global.donar = paypal
