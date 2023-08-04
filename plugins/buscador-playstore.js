@@ -25,5 +25,5 @@ await m.reply('*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝚁𝚁𝙾𝚁, 𝙿𝙾𝚁 𝙵
 handler.help = ['playstore <aplicacion>']
 handler.tags = ['internet']
 handler.command = /^(playstore)$/i
-handler.register = true
+handler.register = false
 export default handler

@@ -20,5 +20,5 @@ else throw '*[❗𝐈𝐍𝐅𝐎❗] 𝙻𝙾 𝚂𝙸𝙴𝙽𝚃𝙾, 𝙰�
 handler.help = ['wm <packname>|<author>']
 handler.tags = ['sticker']
 handler.command = /^take|robar|wm$/i
-handler.register = true
+handler.register = false
 export default handler

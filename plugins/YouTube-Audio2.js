@@ -133,7 +133,7 @@ await conn.sendMessage(m.chat, { document: { url: n2 }, fileName: `${n}.mp4`, mi
 }
 handler.command = ['audiodocu', 'videodocu']
 handler.exp = 0
-handler.register = true
+handler.register = false
 export default handler
 
 async function search(query, options = {}) {

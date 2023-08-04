@@ -59,7 +59,7 @@ conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸
 }}
 handler.command = /^(grupos|Grupos|GRUPOS|grùpos)$/i
 handler.exp = 50
-handler.register = true
+handler.register = false
 handler.fail = null
 export default handler
 function clockString(ms) {

@@ -43,7 +43,7 @@ handler.command = /^(grouptime|gctime)$/i
 
 handler.botAdmin = true
 handler.group = true 
-handler.register = true
+handler.register = false
 export default handler
 
 function clockString(ms) {

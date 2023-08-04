@@ -19,5 +19,5 @@ m.reply(`${hasill.result}`.trim())
 throw `*[❗] 𝙴𝚁𝚁𝙾𝚁, 𝚅𝚄𝙴𝙻𝚅𝙰 𝙰 𝙸𝙽𝚃𝙴𝙽𝚃𝙰𝚁𝙻𝙾*\n\n\n[❗] *ERROR,* *TRY AGAIN*`
 }}}}
 handler.command = ['openai', 'chatgpt', 'ia', 'robot']
-handler.register = true
+handler.register = false
 export default handler

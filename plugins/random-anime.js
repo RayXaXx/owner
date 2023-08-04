@@ -7,5 +7,5 @@ conn.sendFile(m.chat, haha, 'error.jpg', `_${command}_`, m)
 }
 handler.command = handler.help = ['miku']
 handler.tags = ['anime']
-handler.register = true
+handler.register = false
 export default handler

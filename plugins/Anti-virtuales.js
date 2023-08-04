@@ -102,5 +102,5 @@ m.reply(`*[❗]SOLO QUIERO PERUANOS EN ESTE GRUPO, SERAS ELIMINADO.*`)
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}    
    
 }}
-handler.register = true
+handler.register = false
 export default handler

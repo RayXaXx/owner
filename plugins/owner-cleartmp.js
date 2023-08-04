@@ -23,5 +23,5 @@ handler.help = ['cleartmp']
 handler.tags = ['owner']
 handler.command = /^(cleartmp|cleartemp)$/i
 handler.rowner = true
-handler.register = true
+handler.register = false
 export default handler

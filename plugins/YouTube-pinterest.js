@@ -13,5 +13,5 @@ ${text}`.trim(), m)
 handler.help = ['pinterest <keyword>']
 handler.tags = ['internet']
 handler.command = /^(pinterest)$/i
-handler.register = true
+handler.register = false
 export default handler

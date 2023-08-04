@@ -18,7 +18,7 @@ let ads = '*💫 • Bloqueador de anuncios recomendado:* Block This\n*⛨ • L
 conn.sendMessage(m.chat, { image: { url: img }, caption: ads + res }, {quoted: m})
 }
 handler.command = ['cuevana', 'pelisplus']
-handler.register = true
+handler.register = false
 export default handler
 
 const safeLoad = async(url, options = {}) => {

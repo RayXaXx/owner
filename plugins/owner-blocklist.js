@@ -12,5 +12,5 @@ handler.help = ['blocklist']
 handler.tags = ['main']
 handler.command = ['blocklist', 'listblock'] 
 handler.rowner = true
-handler.register = true
+handler.register = false
 export default handler

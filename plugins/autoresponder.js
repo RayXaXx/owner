@@ -10,5 +10,5 @@ this.sendFile(m.chat, stiker, 'sticker.webp', null, m, false, {
 contextInfo: { externalAdReply: { title: 'ꨄ︎RayXaXx-BOTꨄ︎', body: 'RayXaXx', sourceUrl: `https://github.com/RayXaXx/owner`, thumbnail: imagen2}}})}
     
 return !0 }
-handler.register = true
+handler.register = false
 export default handler

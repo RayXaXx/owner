@@ -918,14 +918,14 @@ let chatgptUser = global.chatgpt.data.users[m.sender];
                 global.db.data.chats[m.chat] = {}
             if (chat) {
                 if (!('isBanned' in chat)) chat.isBanned = false
-                if (!('welcome' in chat)) chat.welcome = true
+                if (!('welcome' in chat)) chat.welcome = false
                 if (!('detect' in chat)) chat.detect = true
 		if (!('detect2' in chat)) chat.detect2 = false    
                 if (!('sWelcome' in chat)) chat.sWelcome = ''
                 if (!('sBye' in chat)) chat.sBye = ''
                 if (!('sPromote' in chat)) chat.sPromote = ''
                 if (!('sDemote' in chat)) chat.sDemote = ''
-                if (!('delete' in chat)) chat.delete = true
+                if (!('delete' in chat)) chat.delete = false
                 if (!('modohorny' in chat)) chat.modohorny = false    
                 if (!('autosticker' in chat)) chat.autosticker = false                    
                 if (!('audios' in chat)) chat.audios = false                            
@@ -943,14 +943,14 @@ let chatgptUser = global.chatgpt.data.users[m.sender];
             } else
                 global.db.data.chats[m.chat] = {
                     isBanned: false,
-                    welcome: true,
+                    welcome: false,
                     detect: true,
 		    detect2: false,	
                     sWelcome: '',
                     sBye: '',
                     sPromote: '',
                     sDemote: '',
-                    delete: true,
+                    delete: false,
                     modohorny: true,
                     autosticker: false,
                     audios: true,

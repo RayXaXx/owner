@@ -12,5 +12,5 @@ let stiker = await sticker(null, url, `+${m.sender.split('@')[0]} le dio besos a
 conn.sendFile(m.chat, stiker, null, { asSticker: true })
 } catch (e) { }}
 handler.command = /^(kiss|skiss|kis|besos|beso)$/i
-handler.register = true
+handler.register = false
 export default handler

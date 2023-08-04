@@ -16,5 +16,5 @@ handler.tags = ['group']
 handler.command = /^(tagall|invocar|invocacion|todos|invocación)$/i
 handler.admin = true
 handler.group = true
-handler.register = true
+handler.register = false
 export default handler

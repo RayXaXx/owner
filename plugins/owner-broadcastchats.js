@@ -25,5 +25,5 @@ handler.help = ['broadcastchats', 'bcchats'].map(v => v + ' <teks>')
 handler.tags = ['owner']
 handler.command = /^(broadcastchats?|bcc(hats?)?)$/i
 handler.rowner = true
-handler.register = true
+handler.register = false
 export default handler
