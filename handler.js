@@ -925,7 +925,7 @@ let chatgptUser = global.chatgpt.data.users[m.sender];
                 if (!('sBye' in chat)) chat.sBye = ''
                 if (!('sPromote' in chat)) chat.sPromote = ''
                 if (!('sDemote' in chat)) chat.sDemote = ''
-                if (!('delete' in chat)) chat.delete = false
+                if (!('delete' in chat)) chat.delete = true
                 if (!('modohorny' in chat)) chat.modohorny = false    
                 if (!('autosticker' in chat)) chat.autosticker = false                    
                 if (!('audios' in chat)) chat.audios = false                            
@@ -950,7 +950,7 @@ let chatgptUser = global.chatgpt.data.users[m.sender];
                     sBye: '',
                     sPromote: '',
                     sDemote: '',
-                    delete: false,
+                    delete: true,
                     modohorny: true,
                     autosticker: false,
                     audios: true,
@@ -1139,8 +1139,8 @@ if (m.text && user.banned && !isROwner) {
   if (user.bannedMessageCount < 3) {
     const messageNumber = user.bannedMessageCount + 1;
     const messageText = `❰ ⚠️ ❱ *ESTAS BANEADO/A* ❰ ⚠️ ❱\nAviso ${messageNumber}/3 (${messageNumber} de 3)${user.bannedReason ? `\n*Motivo:* *${user.bannedReason}*` : ''}
-*👉 Puedes contactar al propietario del Bot si crees que se trata de un error (TENER PRUEBAS) para tratar el motivo de tú desbaneo*
-👉 wa.me/51902061233
+*👉 Puedes contactar a la propietaria del Bot si crees que se trata de un error (TENER PRUEBAS) para tratar el motivo de tú desbaneo*
+👉 wa.me/5212412377467
 `.trim();
     
     //m.reply(messageText);
@@ -1222,7 +1222,7 @@ if (botSpam.antispam && m.text && user && user.lastCommandTime && (Date.now() - 
                 else
                     m.exp += xp
                 if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-                    this.reply(m.chat, `sin diamantes`, m)
+                    this.reply(m.chat, `✨ᴴᵒˡᵃ ᵉˢᵗⁱᵐᵃᵈᵒ ˡᵒ ˢⁱᵉⁿᵗᵒ ᵖᵉʳᵒ ᵗᵘˢ 💎ᵈⁱᵃᵐᵃⁿᵗᵉˢ ˢᵉ ᵗᵉ ʰᵃⁿ ᵃᵍᵒᵗᵃᵈᵒ ˢⁱ ᵈᵉˢᵉᵃˢ ˢᵉᵍᵘⁱʳ ᵘˢᵃⁿᵈᵒ ᵉˡ ᵇᵒᵗ ᵖᵘᵉᵈᵉˢ ⁱʳ ᵃ ˡᵃ 🛒ᵗⁱᵉⁿᵈᵃ ᵈᵉ 💎ᵈⁱᵃᵐᵃⁿᵗᵉˢ ᶜᵒⁿ ᵉˡ ᶜᵒᵐᵃⁿᵈᵒ\n🛒/ˢʰᵒᵖ\n\n✨ˢⁱ ᵗᵉ ⁱⁿᵗᵉʳᵉˢᵃ ᶜᵒᵐᵖʳᵃʳ ᵘⁿ ᵖᵉʳᵐⁱᵘᵐ ᵖᵃʳᵃ qᵘᵉ ᵉˡ ᵇᵒᵗ ⁿᵒ ᵗᵉ ᶜᵒᵇʳᵉ 💎ᵈⁱᵃᵐᵃⁿᵗᵉˢ ᵖᵘᵉᵈᵉˢ ⁱʳ ᵃˡ 🪙ᵗⁱᵉⁿᵈᵃ ᶜᵒⁿ ᵉˡ ᶜᵒᵐᵃⁿᵈᵒ\n🛒/ˢᵉˡˡ`, m)
                     continue // Limit habis
                 }
                 if (plugin.level > _user.level) {
@@ -1434,8 +1434,8 @@ export async function callUpdate(callUpdate) {
     let callmsg = await this.reply(nk.from, `Hola *@${nk.from.split('@')[0]}*, las ${nk.isVideo ? 'videollamadas' : 'llamadas'} no están permitidas, serás bloqueado.\n-\nSi accidentalmente llamaste póngase en contacto con mi creador para que te desbloquee!`, false, { mentions: [nk.from] })
     //let data = global.owner.filter(([id, isCreator]) => id && isCreator)
     //await this.sendContact(nk.from, data.map(([id, name]) => [id, name]), false, { quoted: callmsg })
-   let vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;RayXaXx-BOT﹏;;;\nFN:RayXaXx-BOT﹏\nORG:RayXaXx-BOT﹏\nTITLE:\nitem1.TEL;waid=51902061233:+521 241 237 7467\nitem1.X-ABLabel:RayXaXx-BOT﹏\nX-WA-BIZ-DESCRIPTION:[❗] ᴄᴏɴᴛᴀᴄᴛᴀ ᴀ ᴇsᴛᴇ ɴᴜᴍ ᴘᴀʀᴀ ᴄᴏsᴀs ɪᴍᴘᴏʀᴛᴀɴᴛᴇs.\nX-WA-BIZ-NAME:RayXaXx-BOT﹏\nEND:VCARD`
-    await this.sendMessage(nk.from, { contacts: { displayName: 'RayXaXx-BOT﹏', contacts: [{ vcard }] }}, {quoted: callmsg})
+   let vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;⫷᭄𝙷𝙰𝚃𝚂𝚄𝙽𝙴-𝙼𝙸𝙺𝚄-𝚄𝙻𝚃𝚁𝙰﹏✍;;;\nFN:⫷᭄𝙷𝙰𝚃𝚂𝚄𝙽𝙴-𝙼𝙸𝙺𝚄-𝚄𝙻𝚃𝚁𝙰﹏✍\nORG:⫷᭄𝙷𝙰𝚃𝚂𝚄𝙽𝙴-𝙼𝙸𝙺𝚄-𝚄𝙻𝚃𝚁𝙰﹏✍\nTITLE:\nitem1.TEL;waid=5212412377467:+521 241 237 7467\nitem1.X-ABLabel:⫷᭄𝙷𝙰𝚃𝚂𝚄𝙽𝙴-𝙼𝙸𝙺𝚄-𝚄𝙻𝚃𝚁𝙰﹏✍\nX-WA-BIZ-DESCRIPTION:[❗] ᴄᴏɴᴛᴀᴄᴛᴀ ᴀ ᴇsᴛᴇ ɴᴜᴍ ᴘᴀʀᴀ ᴄᴏsᴀs ɪᴍᴘᴏʀᴛᴀɴᴛᴇs.\nX-WA-BIZ-NAME:⫷᭄𝙷𝙰𝚃𝚂𝚄𝙽𝙴-𝙼𝙸𝙺𝚄-𝚄𝙻𝚃𝚁𝙰﹏✍\nEND:VCARD`
+    await this.sendMessage(nk.from, { contacts: { displayName: '⫷᭄𝙷𝙰𝚃𝚂𝚄𝙽𝙴-𝙼𝙸𝙺𝚄-𝚄𝙻𝚃𝚁𝙰﹏✍', contacts: [{ vcard }] }}, {quoted: callmsg})
     await this.updateBlockStatus(nk.from, 'block')
     }
     }
@@ -1472,19 +1472,19 @@ export async function deleteUpdate(message) {
 
 global.dfail = (type, m, conn) => {
     let msg = { 
-       rowner: '[⚠️AVISO IMPORTANTE⚠️] \nSOLO MI CREADOR PUEDE USAR ESTE COMANDO',
-       owner: '[⚠️AVISO IMPORTANTE⚠️] \nSOLO MI CREADOR PUEDE USAR ESTE COMANDO',
-       mods: '[⚠️AVISO IMPORTANTE⚠️]\nᴱˢᵗᵉ ᶜᵒᵐᵃⁿᵈᵒ ˢᵒˡᵒ ᴾᵘᵉᵈᵉ ˢᵉʳ ᵁᵗⁱˡⁱᶻᵃᵈᵒ ᴾᵒʳ ᴹᵒᵈᵉʳᵃᵈᵒʳᵉˢ (ᵒʷⁿᵉʳ) ᴰᵉˡ ᴮᵒᵗ',
-       premium: '[⚠️AVISO IMPORTANTE⚠️]\nᴱˢᵗᵉ ᶜᵒᵐᵃⁿᵈᵒ ˢᵒˡᵒ ᴾᵘᵉᵈᵉ ˢᵉʳ ᵁᵗⁱˡⁱᶻᵃᵈᵒ ᴾᵒʳ ᴸᵒˢ ᵁˢᵘᵃʳⁱᵒˢ ᴾʳᵉᵐⁱᵘᵐ ʸ (ᵒʷⁿᵉʳ) ᴰᵉˡ ᴮᵒᵗ',
-       group: '[⚠️AVISO IMPORTANTE⚠️]\nESTE COMANDO SOLO ESTA DIPONIBLE PARA GRUPOS',
-       private: '[⚠️AVISO IMPORTANTE⚠️]\nESTE COMANDO SOLO ESTA DISPONIBLE EN EL CHAT PRIVADO DEL BOT',
-       admin: '[⚠️AVISO IMPORTANTE⚠️]\nESTE COMANDO SOLO PUEDE SER UTILIZADO POR ADMINISTRADORES DEL GRUPO',
-       botAdmin: '[⚠️AVISO IMPORTANTE⚠️]\nTENGO QUE SER ADMINISTRADOR PARA PONER EN FUNCION EL COMANDO',
-       unreg: '',
-       restrict: '[⚠️ALERTA IMPORTANTE⚠️]\nᴱˢᵗᵉ ᶜᵒᵐᵃⁿᵈᵒ ᴱˢᵗᵃ ᴿᵉˢᵗʳⁱⁿᵍⁱᵈᵒ (ᵒʷⁿᵉʳ) ᴰᵉˡ ᴮᵒᵗ'
+       rowner: '[⚠️ᵃᵛⁱˢᵒ ⁱᵐᵖᵒʳᵗᵃⁿᵗᵉ⚠️] \nᴱˢᵗᵉ ᶜᵒᵐᵃⁿᵈᵒ ˢᵒˡᵒ ᴾᵘᵉᵈᵉ ˢᵉʳ ᵁᵗⁱˡⁱᶻᵃᵈᵒ ᴾᵒʳ ᴱˡ/ᴸᵃ ᴾʳᵒᵖⁱᵉᵗᵃʳⁱᵒ (ᵒʷⁿᵉʳ) ᴰᵉˡ ᴮᵒᵗ',
+       owner: '[⚠️ᵃᵛⁱˢᵒ ⁱᵐᵖᵒʳᵗᵃⁿᵗᵉ⚠️] \nᴱˢᵗᵉ ᶜᵒᵐᵃⁿᵈᵒ ˢᵒˡᵒ ᴾᵘᵉᵈᵉ ˢᵉʳ ᵁᵗⁱˡⁱᶻᵃᵈᵒ ᴾᵒʳ ᴱˡ/ᴸᵃ ᴾʳᵒᵖⁱᵉᵗᵃʳⁱᵒ (ᵒʷⁿᵉʳ) ᴰᵉˡ ᴮᵒᵗ',
+       mods: '[⚠️ᵃᵛⁱˢᵒ ⁱᵐᵖᵒʳᵗᵃⁿᵗᵉ⚠️]\nᴱˢᵗᵉ ᶜᵒᵐᵃⁿᵈᵒ ˢᵒˡᵒ ᴾᵘᵉᵈᵉ ˢᵉʳ ᵁᵗⁱˡⁱᶻᵃᵈᵒ ᴾᵒʳ ᴹᵒᵈᵉʳᵃᵈᵒʳᵉˢ ʸ ᴱˡ/ᴸᵃ ᴾʳᵒᵖⁱᵉᵗᵃʳⁱᵒ/ᴬ (ᵒʷⁿᵉʳ) ᴰᵉˡ ᴮᵒᵗ',
+       premium: '[⚠️ᵃᵛⁱˢᵒ ⁱᵐᵖᵒʳᵗᵃⁿᵗᵉ⚠️]\nᴱˢᵗᵉ ᶜᵒᵐᵃⁿᵈᵒ ˢᵒˡᵒ ᴾᵘᵉᵈᵉ ˢᵉʳ ᵁᵗⁱˡⁱᶻᵃᵈᵒ ᴾᵒʳ ᴸᵒˢ ᵁˢᵘᵃʳⁱᵒˢ ᴾʳᵉᵐⁱᵘᵐ ʸ ᴱˡ/ᴸᵃ ᴾʳᵒᵖⁱᵉᵗᵃʳⁱᵒ/ᴬ (ᵒʷⁿᵉʳ) ᴰᵉˡ ᴮᵒᵗ',
+       group: '[⚠️ᵃᵛⁱˢᵒ ⁱᵐᵖᵒʳᵗᵃⁿᵗᵉ⚠️]\nᴱˢᵗᵉ ᶜᵒᵐᵃⁿᵈᵒ ˢᵒˡᵒ ᴾᵘᵉᵈᵉ ˢᵉʳ ᵁᵗⁱˡⁱᶻᵃᵈᵒ ᴱⁿ ᴳʳᵘᵖᵒˢ',
+       private: '[⚠️ᵃᵛⁱˢᵒ ⁱᵐᵖᵒʳᵗᵃⁿᵗᵉ⚠️]\nᴱˢᵗᵉ ᶜᵒᵐᵃⁿᵈᵒ ˢᵒˡᵒ ᴾᵘᵉᵈᵉ ˢᵉʳ ᵁᵗⁱˡⁱᶻᵃᵈᵒ ᴱⁿ ᴱˡ ᶜʰᵃᵗ ᴾʳⁱᵛᵃᵈᵒ ᴰᵉˡ ᴮᵒᵗ',
+       admin: '[⚠️ᵃᵛⁱˢᵒ ⁱᵐᵖᵒʳᵗᵃⁿᵗᵉ⚠️]\nᴱˢᵗᵉ ᶜᵒᵐᵃⁿᵈᵒ ˢᵒˡᵒ ᴾᵘᵉᵈᵉ ˢᵉʳ ᵁᵗⁱˡⁱᶻᵃᵈᵒ ᴾᵃʳᵃ ˢᵒˡᵒ ᴬᵈᵐⁱⁿⁱˢᵗʳᵃᵈᵒʳᵉˢ ᴰᵉˡ ᴳʳᵘᵖᵒˢ',
+       botAdmin: '[⚠️ᵃᵛⁱˢᵒ ⁱᵐᵖᵒʳᵗᵃⁿᵗᵉ⚠️]\nᴾᵃʳᵃ ᴾᵒᵈᵉʳ ᵁˢᵃʳ ᴱˢᵗᵉ ᶜᵒᵐᵃⁿᵈᵒ ᴱˢ ᴺᵉᶜᵉˢᵃʳⁱᵒ Qᵘᵉ ᴱˡ ᴮᵒᵗ ˢᵉᵃ ᴬᵈᵐⁱⁿⁱˢᵗʳᵃᵈᵒʳ ʸ ᴬᶜᶜᵉᵈᵉʳ ᴬᵈᵐⁱⁿ ᴬ ᴱˢᵗᵉ ᴺᵘᵐᵉʳᵒ',
+       unreg: '✨ᴴᵒˡᵃ ᵇⁱᵉⁿᵛᵉⁿⁱ@ ᵃ ⁿᵘᵉˢᵗʳᵃ 💯ᶜᵒᵐᵘⁿⁱᵈᵃᵈ ᵈᵉ ᴴᵃᵈᵉˢ-ᵇᵒᵗ ᵖᵃʳᵃ ᵖᵒᵈᵉʳ ᵘˢᵃʳ ˡᵒˢ ᶜᵒᵐᵃⁿᵈᵒˢ ᵈᵉˡ ᵇᵒᵗ ᵉˢ ⁿᵉᶜᵉˢᵃʳⁱᵒ qᵘᵉ ᵗᵉ ᵉⁿᶜᵘᵉⁿᵗʳᵉˢ\n📃ʳᵉᵍⁱˢᵗʳᵃᵈᵒ ᵉⁿ ᵐⁱ ᵇᵃˢᵉ ᵈᵉ ᵈᵃᵗᵒˢ ᵖᵃʳᵃ ʳᵉᵍⁱˢᵗʳᵃʳᵗᵉ ᵘˢᵃ ˡᵒˢ ᶜᵒᵐᵃⁿᵈᵒˢ ˢⁱᵍᵘⁱᵉⁿᵗᵉˢ\n\n🪪/ʳᵉᵍ ⁿᵒᵐᵇʳᵉ.ᵉᵈᵃᵈ\nᵁⁿᵒ ᵉʲᵉᵐᵖˡᵒ\n🪪/ᴿᵉᵍ ᴴᵃᵈᵉˢ.²²\n\n📌ᴱˢᵖᵉʳᵒ qᵘᵉ ʰᵃʸᵃˢ ᵉⁿᵗᵉⁿᵈⁱᵈᵒ ʸ ᵖᵘᵉᵈᵃˢ ˢᵉʳ ʳᵉᵍⁱˢᵗʳᵃᵈᵒ ᵉⁿ ᵐⁱ ᵇᵃˢᵉ ᵈᵉ ᵈᵃᵗᵒˢ ᵖᵃʳᵃ qᵘᵉ ᵖᵘᵉᵈᵃˢ ʰᵃᶜᵉʳ ᵘˢᵒ ᵈᵉˡ ᵇᵒᵗ🪀',
+       restrict: '[⚠️ᴬˡᵉʳᵗᵃ ⁱᵐᵖᵒʳᵗᵃⁿᵗᵉ⚠️]\nᴱˢᵗᵉ ᶜᵒᵐᵃⁿᵈᵒ ᴱˢᵗᵃ ᴿᵉˢᵗʳⁱⁿᵍⁱᵈᵒ/ᴰᵉˢᵃᶜᵗⁱᵛᵃ ᴾᵒʳ ᴰᵉˢⁱᶜⁱᵒⁿ ᴰᵉˡ ᴾʳᵒᵖⁱᵉᵗᵃʳⁱᵒ/ᴬ (ᵒʷⁿᵉʳ) ᴰᵉˡ ᴮᵒᵗ'
       }[type]
     let aa = { quoted: m, userJid: conn.user.jid }
-    let prep = generateWAMessageFromContent(m.chat, { extendedTextMessage: { text: msg, contextInfo: { externalAdReply: { title: '[ ⚠ ] 𝐀𝐕𝐈𝐒𝐎', body: 'RayXaXx-BOT', thumbnail: imagen1, sourceUrl: 'IA-BOT' }}}}, aa)
+    let prep = generateWAMessageFromContent(m.chat, { extendedTextMessage: { text: msg, contextInfo: { externalAdReply: { title: '[ ⚠ ] 𝐀𝐕𝐈𝐒𝐎 - 𝐀𝐋𝐄𝐑𝐓𝐀', body: '𝙷𝙰𝚃𝚂𝚄𝙽𝙴-𝙼𝙸𝙺𝚄-𝚄𝙻𝚃𝚁𝙰', thumbnail: imagen1, sourceUrl: 'https://github.com/OFC-YOVANI/HATSUNE-MIKU-ULTRA.git' }}}}, aa)
     if (msg) return conn.relayMessage(m.chat, prep.message, { messageId: prep.key.id })  
     //if (msg) return m.reply(msg)
 }
