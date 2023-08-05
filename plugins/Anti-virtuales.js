@@ -91,6 +91,11 @@ global.db.data.users[m.sender].banned = true
 m.reply(`*[❗]SOLO QUIERO PERUANOS EN ESTE GRUPO, SERAS ELIMINADO.*`)
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}
 
+if (m.sender.startsWith('51' || '51')) {
+global.db.data.users[m.sender].banned = true
+m.reply(`*[❗]SOLO QUIERO PERUANOS EN ESTE GRUPO, SERAS ELIMINADO.*`)
+await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}
+
 if (m.sender.startsWith('44' || '44')) {
 global.db.data.users[m.sender].banned = true
 m.reply(`*[❗]SOLO QUIERO PERUANOS EN ESTE GRUPO, SERAS ELIMINADO.*`)
