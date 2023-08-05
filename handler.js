@@ -922,6 +922,7 @@ let chatgptUser = global.chatgpt.data.users[m.sender];
                 if (!('detect' in chat)) chat.detect = true
 		if (!('detect2' in chat)) chat.detect2 = false    
                 if (!('sWelcome' in chat)) chat.sWelcome = ''
+                if (!('sBye' in chat)) chat.sBye = ''
                 if (!('sPromote' in chat)) chat.sPromote = ''
                 if (!('sDemote' in chat)) chat.sDemote = ''
                 if (!('delete' in chat)) chat.delete = false
@@ -946,6 +947,7 @@ let chatgptUser = global.chatgpt.data.users[m.sender];
                     detect: true,
 		    detect2: false,	
                     sWelcome: '',
+                    sBye: '',
                     sPromote: '',
                     sDemote: '',
                     delete: false,
