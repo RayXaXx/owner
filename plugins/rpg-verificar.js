@@ -22,16 +22,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
 ☃️ NOMBRE: ${name}
 ☃️ EDAD: ${age}
 NUMERO DE SERIE
- ${sn}
-
-"GRACIAS POR REGISTRARTE"
-
-SI DECEAS ELIMINAR TU REGISTRO ELIMINA TU NUMERO DE SERIE
-
-EJEMPLO
-🪪/unreg ${sn}
-
-DESPUES TE VUELVES A REGISTRAR`.trim())
+ ${sn}`.trim())
 }
 handler.help = ['daftar', 'register'].map(v => v + ' <nama>.<umur>')
 handler.tags = ['xp']
